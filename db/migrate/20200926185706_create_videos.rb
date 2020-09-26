@@ -3,6 +3,8 @@ class CreateVideos < ActiveRecord::Migration[6.0]
     create_table :videos do |t|
       t.string :video_id
       t.string :title
+      t.string :thumbnail_url
+
       t.timestamps
     end
   end
