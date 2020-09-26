@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2020_09_26_185706) do
   create_table "videos", force: :cascade do |t|
     t.string "video_id"
     t.string "title"
+    t.string "thumbnail_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
