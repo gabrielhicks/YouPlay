@@ -48,3 +48,7 @@
 .card:hover{
   transform: scale(1.03);
 }
+
+iframe{
+  border-radius: 20px;
+}
