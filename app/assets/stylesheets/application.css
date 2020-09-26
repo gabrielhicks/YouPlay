@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+
+
+.card-body{
+  padding: 10px;
+  max-height: 70px;
+}
+
+.card-text{
+  font-size: 10pt;
+}
+
+.btn{
+  width: 100%;
+    letter-spacing: 10px;
+}
+
+/* .card{
+  display: flex;
+  float: left;
+  max-height: 300px;
+} */
+
+
+.card{
+  margin:20px;
+  display:flex;
+  float: left;
+  max-height: 250px;
+  min-height: 250px;
+  border-radius: 20px;
+  transition: 1s;
+}
+.card:hover{
+  transform: scale(1.03);
+}
