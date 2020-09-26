@@ -1,0 +1,7 @@
+<% @videos.each do |video| %>
+
+  <iframe width="200" height="130" src="https://www.youtube.com/embed/<%= video.video_id %>"
+  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+  gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <!-- <br><p><%= video.title %></p><br/> -->
+<% end %>
