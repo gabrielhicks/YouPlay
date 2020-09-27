@@ -13,10 +13,80 @@
  *= require_tree .
  *= require_self
  */
-body{
+.indexpage{
    margin: auto;
    width: 90%;
  }
+
+ .landing_page{
+   height: 100vh;
+   margin: auto;
+   width: 100%;
+ }
+
+
+/* pills */
+.pills{
+  margin-left: 15vw;
+  padding-top: 30vh;
+
+}
+
+.pill{
+  margin: 3px;
+  position: relative;
+}
+
+.landing_page a:nth-of-type(1){
+  background:rgb(46, 163, 247);
+  color: white;
+}
+
+.landing_page a:nth-of-type(2){
+  background:rgb(81, 241, 55);
+  color: white;
+}
+
+.landing_page a:nth-of-type(3){
+  background:rgb(250, 255, 25);
+  color: black;
+}
+
+.landing_page a:nth-of-type(4){
+  background:rgb(255, 46, 25);
+  color: white;
+}
+
+.landing_page a:nth-of-type(5){
+  background:rgb(25, 255, 221);
+  color: white;
+}
+
+.landing_page a:nth-of-type(6){
+  background:rgb(168, 25, 255);
+  color: white;
+}
+.landing_page a:nth-of-type(7){
+  background:rgb(255, 25, 143);
+  color: white;
+}
+
+.landing_page a:nth-of-type(8){
+  background:rgb(25, 255, 241);
+  color: white;
+}
+
+.landing_page a:nth-of-type(9){
+  background:rgb(255, 198, 25);
+  color: white;
+}
+
+.landing_page a:nth-of-type(10){
+  background:rgb(255, 115, 25);
+  color: white;
+}
+
+
  .card{
    width: 19%;
    margin:0.5%;
@@ -27,6 +97,14 @@ body{
  }
  .card:hover{
    transform: scale(1.03);
+ }
+
+ .card-show{
+   width: 19%;
+   margin:0.5%;
+   border-radius: 20px;
+   transition: 1s;
+   justify-content: center;
  }
 
 .card-text{
@@ -65,30 +143,34 @@ body{
 
 
 .previous{
-  left:-3vw;
+  left:3vw;
   top: 40vh;
   position: absolute;
   color:lightgrey;
   font-weight: 700;
   transition: 0.5s;
+  opacity: 0.2;
+  transform: translateX(10px);
 }
 .previous:hover{
   text-decoration: none;
-  color: black;
-  transform: scale(1.06);
+  transform: scale(1.2);
+  opacity: 0.8;
 }
 .next{
-  right:-3vw;
+  right:3vw;
   top: 40vh;
   position: absolute;
   color:lightgrey;
   font-weight: 700;
   transition: 0.5s;
+  opacity: 0.2;
+  transform: translateX(-10px);
 }
 .next:hover{
   text-decoration: none;
-  transform: scale(1.06);
-  color: black;
+  transform: scale(1.2);
+  opacity: 0.8;
 }
 iframe{
   height: 80vh;
@@ -124,7 +206,6 @@ img{
   .card{
     width: 98%;
     margin:1%;
-
   }
 }
 
@@ -133,7 +214,7 @@ img{
 /* page transition*/
 
 .slideToLeft{
-  animation: transitionLeft 2000ms;
+  animation: transitionLeft 800ms;
   animation-iteration-count:1;
   animation-fill-mode: forwards;
 }
@@ -141,7 +222,7 @@ img{
 @keyframes transitionLeft {
   from {
     opacity: 0;
-    transform: translateX(2000px);
+    transform: translateX(100%);
   }
   to {
     opacity: 1;
