@@ -13,7 +13,10 @@
  *= require_tree .
  *= require_self
  */
-
+body{
+  margin: auto;
+  width: 90%;
+}
 
 .card-body{
   padding: 10px;
@@ -21,7 +24,7 @@
 }
 
 .card-text{
-  font-size: 10pt;
+  font-size: 8pt;
 }
 
 .btn{
@@ -48,7 +51,29 @@
 .card:hover{
   transform: scale(1.03);
 }
-
+/*
 iframe{
   border-radius: 20px;
+} */
+
+img{
+  border-radius: 20px;
+}
+/* page transition*/
+
+.slideToLeft{
+  animation: transitionLeft 2000ms;
+  animation-iteration-count:1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes transitionLeft {
+  from {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
