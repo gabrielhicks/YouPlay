@@ -1,11 +1,11 @@
 class CategoriesController < ApplicationController
 
   def index
-    @categories = Category.all
+    @categories = Video.all.map {|video| video.category}.uniq
   end
 
   def show
-    @category = Category.find(params[:id])
+    @category = Video.all.map(params[:id])
   end
 
 end
