@@ -4,19 +4,18 @@ require 'json'
 require_relative '../config/environment'
 Video.destroy_all
 
-@youtube1 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Ruby+on+Rails+tutorial&key=AIzaSyCa_t27LjcFUYh0FoF0rtw65TxS-RuxudQ')
-@youtube2 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Java+Programming+Tutorial&key=AIzaSyCa_t27LjcFUYh0FoF0rtw65TxS-RuxudQ')
-@youtube3 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=JavaScript+ES6+Tutorial&key=AIzaSyCa_t27LjcFUYh0FoF0rtw65TxS-RuxudQ')
-@youtube4 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Reactjs+Tutorial&key=AIzaSyCa_t27LjcFUYh0FoF0rtw65TxS-RuxudQ')
-@youtube5 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Nodejs+Tutorial&key=AIzaSyCa_t27LjcFUYh0FoF0rtw65TxS-RuxudQ')
-@youtube6 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Expressjs+Tutorial&key=AIzaSyCa_t27LjcFUYh0FoF0rtw65TxS-RuxudQ')
-@youtube7 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Laravel+Tutorial&key=AIzaSyCa_t27LjcFUYh0FoF0rtw65TxS-RuxudQ')
-@youtube8 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=PHP+Tutorial&key=AIzaSyCa_t27LjcFUYh0FoF0rtw65TxS-RuxudQ')
-@youtube9 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Bootstrap+CSS+Tutorial&key=AIzaSyCa_t27LjcFUYh0FoF0rtw65TxS-RuxudQ')
-@youtube10 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Vanilla+CSS+Tutorial&key=AIzaSyCa_t27LjcFUYh0FoF0rtw65TxS-RuxudQ')
+@youtube1 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Ruby+on+Rails+tutorial&key=AIzaSyABTuVRUFXFwuATITGx5qBszBZJG0YU2PI')
+@youtube2 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Java+Programming+Tutorial&key=AIzaSyABTuVRUFXFwuATITGx5qBszBZJG0YU2PI')
+@youtube3 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=JavaScript+ES6+Tutorial&key=AIzaSyABTuVRUFXFwuATITGx5qBszBZJG0YU2PI')
+@youtube4 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Reactjs+Tutorial&key=AIzaSyABTuVRUFXFwuATITGx5qBszBZJG0YU2PI')
+@youtube5 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Nodejs+Tutorial&key=AIzaSyABTuVRUFXFwuATITGx5qBszBZJG0YU2PI')
+@youtube6 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Expressjs+Tutorial&key=AIzaSyABTuVRUFXFwuATITGx5qBszBZJG0YU2PI')
+@youtube7 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Laravel+Tutorial&key=AIzaSyABTuVRUFXFwuATITGx5qBszBZJG0YU2PI')
+@youtube8 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=PHP+Tutorial&key=AIzaSyABTuVRUFXFwuATITGx5qBszBZJG0YU2PI')
+@youtube9 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Bootstrap+CSS+Tutorial&key=AIzaSyABTuVRUFXFwuATITGx5qBszBZJG0YU2PI')
+@youtube10 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Vanilla+CSS+Tutorial&key=AIzaSyABTuVRUFXFwuATITGx5qBszBZJG0YU2PI')
 
 @yt1 = JSON.parse(@youtube1)
-binding.pry
 @yt2 = JSON.parse(@youtube2)
 @yt3 = JSON.parse(@youtube3)
 @yt4 = JSON.parse(@youtube4)
@@ -39,40 +38,15 @@ binding.pry
 # php = Category.create(name: "PHP")
 # bootstrap = Category.create(name: "Bootstrap")
 # css = Category.create(name: "CSS")
+
+
+j=0
+@yt_array.each do |array|
 category_names = ["Ruby on Rails", "Java", "JavaScript", "React", "Node", "Express", "Laravel", "PHP", "Bootstrap", "CSS"]
-
-
-# @yt_array.each do |array| #yt1 x 1
-
-#     category_names.each do |category| #yt1 x 10
-
-#         i=0
-#         array["items"].each do #yt1 x 50
-#             Video.create(
-#             video_id: array[i]["id"]["videoId"], 
-#             title: array[i]["snippet"]["title"], 
-#             thumbnail_url: array[i]["snippet"]["thumbnails"]["medium"]["url"], 
-#             category: category)
-#         i+=1
-#         end
-#         #yt1 x 50
-#     end
-#     #yt1 X 500
-# end
-@yt_array.each do |array| #yt1 x 1
-
-    category_names.each do |category| #yt1 x 10
-
         i=0
-        array["items"].each do #yt1 x 50
-            Video.create(
-            video_id: array[i]["id"]["videoId"], 
-            title: array[i]["snippet"]["title"], 
-            thumbnail_url: array[i]["snippet"]["thumbnails"]["medium"]["url"], 
-            category: category)
+        50.times do
+            Video.create(video_id: array["items"][i]["id"]["videoId"], title: array["items"][i]["snippet"]["title"], thumbnail_url: array["items"][i]["snippet"]["thumbnails"]["medium"]["url"], category: category_names[j])
         i+=1
         end
-        #yt1 x 50
-    end
-    #yt1 X 500
+    j+=1
 end
