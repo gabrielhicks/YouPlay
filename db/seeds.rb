@@ -2,7 +2,6 @@ require 'pry'
 require 'rest-client'
 require 'json'
 require_relative '../config/environment'
-Category.destroy_all
 Video.destroy_all
 
 @youtube1 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Ruby+on+Rails+tutorial&key=AIzaSyCa_t27LjcFUYh0FoF0rtw65TxS-RuxudQ')
@@ -17,6 +16,7 @@ Video.destroy_all
 @youtube10 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Vanilla+CSS+Tutorial&key=AIzaSyCa_t27LjcFUYh0FoF0rtw65TxS-RuxudQ')
 
 @yt1 = JSON.parse(@youtube1)
+binding.pry
 @yt2 = JSON.parse(@youtube2)
 @yt3 = JSON.parse(@youtube3)
 @yt4 = JSON.parse(@youtube4)
@@ -29,32 +29,50 @@ Video.destroy_all
 
 @yt_array = [@yt1, @yt2, @yt3, @yt4, @yt5, @yt6, @yt7, @yt8, @yt9, @yt10]
 
-rails = Category.create(name: "Ruby on Rails")
-java = Category.create(name: "Java")
-js = Category.create(name: "JavaScript")
-react = Category.create(name: "React.js")
-node = Category.create(name: "Node.js")
-express = Category.create(name: "Express.js")
-laravel = Category.create(name: "Laravel")
-php = Category.create(name: "PHP")
-bootstrap = Category.create(name: "Bootstrap")
-css = Category.create(name: "CSS")
+# rails = Category.create(name: "Ruby on Rails")
+# java = Category.create(name: "Java")
+# js = Category.create(name: "JavaScript")
+# react = Category.create(name: "React.js")
+# node = Category.create(name: "Node.js")
+# express = Category.create(name: "Express.js")
+# laravel = Category.create(name: "Laravel")
+# php = Category.create(name: "PHP")
+# bootstrap = Category.create(name: "Bootstrap")
+# css = Category.create(name: "CSS")
+category_names = ["Ruby on Rails", "Java", "JavaScript", "React", "Node", "Express", "Laravel", "PHP", "Bootstrap", "CSS"]
 
-@yt_array.each do |array|
-    i=0
-    50.times do
-        Video.create(video_id: array["items"][i]["id"]["videoId"], title: array["items"][i]["snippet"]["title"], thumbnail_url: array["items"][i]["snippet"]["thumbnails"]["medium"]["url"], category_id: 1)
-    i+=1
+
+# @yt_array.each do |array| #yt1 x 1
+
+#     category_names.each do |category| #yt1 x 10
+
+#         i=0
+#         array["items"].each do #yt1 x 50
+#             Video.create(
+#             video_id: array[i]["id"]["videoId"], 
+#             title: array[i]["snippet"]["title"], 
+#             thumbnail_url: array[i]["snippet"]["thumbnails"]["medium"]["url"], 
+#             category: category)
+#         i+=1
+#         end
+#         #yt1 x 50
+#     end
+#     #yt1 X 500
+# end
+@yt_array.each do |array| #yt1 x 1
+
+    category_names.each do |category| #yt1 x 10
+
+        i=0
+        array["items"].each do #yt1 x 50
+            Video.create(
+            video_id: array[i]["id"]["videoId"], 
+            title: array[i]["snippet"]["title"], 
+            thumbnail_url: array[i]["snippet"]["thumbnails"]["medium"]["url"], 
+            category: category)
+        i+=1
+        end
+        #yt1 x 50
     end
+    #yt1 X 500
 end
-
-Video.all[1..49].each {|video| video.update(category: rails)}
-Video.all[50..99].each {|video| video.update(category: java)}
-Video.all[100..149].each {|video| video.update(category: js)}
-Video.all[150..199].each {|video| video.update(category: react)}
-Video.all[200..249].each {|video| video.update(category: node)}
-Video.all[250..299].each {|video| video.update(category: express)}
-Video.all[300..349].each {|video| video.update(category: laravel)}
-Video.all[350..399].each {|video| video.update(category: php)}
-Video.all[400..449].each {|video| video.update(category: bootstrap)}
-Video.all[450..499].each {|video| video.update(category: css)}

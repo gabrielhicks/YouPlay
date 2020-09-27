@@ -13,23 +13,50 @@
  *= require_tree .
  *= require_self
  */
-body{
+body {
   margin: auto;
   width: 90%;
 }
 
-.card-body{
-  padding: 10px;
-  max-height: 70px;
+.card {
+  width: 19%;
+  margin: 0.5%;
+  float: left;
+  border-radius: 20px;
+  transition: 1s;
+  justify-content: center;
 }
 
-.card-text{
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-text {
   font-size: 8pt;
+  padding-bottom: 2%;
+  position: absolute;
+  background-color: white;
+  bottom: 0;
+  text-align: center;
+  color: black;
+  opacity: 0;
+  padding: 5px;
+  border-radius: 20px;
+  transition: 300ms;
+  width: 100%;
+  font-weight: 700;
+  transform: translateY(50%) scale(0.3) rotateX(90deg);
 }
 
-.btn{
+.card:hover .card-text {
+  opacity: .85;
+  transform: translateY(0px);
   width: 100%;
-    letter-spacing: 10px;
+}
+
+.btn {
+  width: 100%;
+  letter-spacing: 10px;
 }
 
 /* .card{
@@ -39,33 +66,51 @@ body{
 } */
 
 
-.card{
-  margin: 20px;
-  display:flex;
-  float: left;
-  max-height: 250px;
-  min-height: 250px;
-  max-width: 250px;
-  min-width: 250px;
-  border-radius: 10px;
-  transition: 1s;
+iframe {
+  height: 80vh;
 }
-.card:hover{
-  transform: scale(1.03);
-}
-/*
-iframe{
-  border-radius: 20px;
-} */
 
-img{
+img {
   border-radius: 20px;
 }
+
+
+
+/*Responsive*/
+
+
+@media only screen and (max-width: 1500px) {
+  .card {
+    width: 24%;
+    margin: .5%;
+
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .card {
+    width: 48%;
+    margin: 1%;
+
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .card {
+    width: 98%;
+    margin: 1%;
+
+  }
+}
+
+
+
 /* page transition*/
 
-.slideToLeft{
+.slideToLeft {
   animation: transitionLeft 2000ms;
-  animation-iteration-count:1;
+  animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
@@ -74,6 +119,7 @@ img{
     opacity: 0;
     transform: translateX(2000px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0px);
