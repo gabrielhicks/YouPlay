@@ -14,23 +14,23 @@
  *= require_self
  */
 body{
-  margin: auto;
-  width: 90%;
-}
+   margin: auto;
+   width: 90%;
+ }
 
 .card-body{
-  padding: 10px;
-  max-height: 70px;
-}
+   padding: 10px;
+   max-height: 70px;
+ }
 
 .card-text{
-  font-size: 8pt;
-}
+   font-size: 8pt;
+ }
 
 .btn{
-  width: 100%;
-    letter-spacing: 10px;
-}
+   width: 100%;
+     letter-spacing: 10px;
+ }
 
 /* .card{
   display: flex;
@@ -38,27 +38,59 @@ body{
   max-height: 300px;
 } */
 
-
 .card{
-  margin:20px;
+  width: 19%;
+  margin:0.5%;
   display:flex;
   float: left;
-  max-height: 250px;
-  min-height: 250px;
+
   border-radius: 20px;
   transition: 1s;
 }
 .card:hover{
   transform: scale(1.03);
 }
-/*
+
 iframe{
-  border-radius: 20px;
-} */
+  height: 80vh;
+}
 
 img{
   border-radius: 20px;
 }
+
+
+
+/*Responsive*/
+
+
+@media only screen and (max-width: 1500px) {
+  .card{
+    width: 24%;
+    margin:.5%;
+
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .card{
+    width: 48%;
+    margin:1%;
+
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .card{
+    width: 100%;
+    margin:0%;
+
+  }
+}
+
+
+
 /* page transition*/
 
 .slideToLeft{
