@@ -64,6 +64,32 @@ body{
 
 
 
+.previous{
+  left:-3vw;
+  top: 40vh;
+  position: absolute;
+  color:lightgrey;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.previous:hover{
+  text-decoration: none;
+  color: black;
+  transform: scale(1.06);
+}
+.next{
+  right:-3vw;
+  top: 40vh;
+  position: absolute;
+  color:lightgrey;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.next:hover{
+  text-decoration: none;
+  transform: scale(1.06);
+  color: black;
+}
 iframe{
   height: 80vh;
 }

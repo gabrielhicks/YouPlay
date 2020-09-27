@@ -3,4 +3,6 @@ frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media
 gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h4><%= @video.title %></h4>
 
-<a href="/videos">Go Back</a>
+<a href="/videos">Home Page</a><br/>
+<a class="previous" href="/videos/<%= @video.id-1 %>"><h2><</h2></a><br/>
+<a class="next" href="/videos/<%= @video.id+1 %>"><h2>></h2></a>
