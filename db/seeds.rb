@@ -3,7 +3,6 @@ require 'rest-client'
 require 'json'
 require_relative '../config/environment'
 Video.destroy_all
-
 @youtube1 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Ruby+on+Rails+tutorial&key=AIzaSyABTuVRUFXFwuATITGx5qBszBZJG0YU2PI')
 @youtube2 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Java+Programming+Tutorial&key=AIzaSyABTuVRUFXFwuATITGx5qBszBZJG0YU2PI')
 @youtube3 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=JavaScript+ES6+Tutorial&key=AIzaSyABTuVRUFXFwuATITGx5qBszBZJG0YU2PI')
