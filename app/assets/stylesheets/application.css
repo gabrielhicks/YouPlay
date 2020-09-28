@@ -28,6 +28,17 @@
   margin-top:3vh;
 }
 
+.inputbox{
+  border-radius: 20px;
+  padding: 3px;
+  padding-left: 10px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-right: 20px;
+  border: 0.5px solid lightgrey;
+  transition: 1s;
+}
+
 .searchbutton{
   border-radius: 20px;
   background: #0dcbff;
@@ -36,7 +47,7 @@
   color: white;
   transition: 1s;
 }
-.searchbutton:hover{
+.inputbox:hover, .searchbutton:hover{
   transform: scale(1.1);
 }
 
@@ -167,11 +178,6 @@
   opacity: 0.2;
   transform: translateX(10px);
 }
-.previous:hover{
-  text-decoration: none;
-  transform: scale(1.2);
-  opacity: 0.8;
-}
 .next{
   right:3vw;
   top: 40vh;
@@ -182,7 +188,7 @@
   opacity: 0.2;
   transform: translateX(-10px);
 }
-.next:hover{
+.previous:hover, .next:hover{
   text-decoration: none;
   transform: scale(1.2);
   opacity: 0.8;
