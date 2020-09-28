@@ -15,7 +15,6 @@ class VideosController < ApplicationController
 
   def handle_search
     @input = (params[:input])
-    byebug
     @playlist = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q='+@input+'&key=AIzaSyBuVA_lzCCxno3CnOYXp3LQRJb7tgoc8ZU')
     array = JSON.parse(@playlist)
 

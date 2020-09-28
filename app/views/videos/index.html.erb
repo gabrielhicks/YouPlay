@@ -12,9 +12,11 @@
   </div>
 
   <div class="searchbar">
-    <form>
-
-    </form>
+    <%= form_tag "/search" do  %>
+        <%= label_tag "input" %>
+        <%= text_field_tag :input %>
+        <%= submit_tag "Search!" %>
+    <% end %>
   </div>
 
 
