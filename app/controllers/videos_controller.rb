@@ -15,11 +15,12 @@ class VideosController < ApplicationController
 
   def handle_search
     @input = (params[:input])
-    @playlist = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q='+@input+'&key=AIzaSyBuVA_lzCCxno3CnOYXp3LQRJb7tgoc8ZU')
+    @max = '20'
+    @playlist = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults='+@max+'&q='+@input+'&key=AIzaSyCSRVb7dvx-58dq8j7s7oos7aG5uMzdmvw')
     array = JSON.parse(@playlist)
 
     i = 0
-    50.times do
+    @max.to_i.times do
       Video.create(video_id: array["items"][i]["id"]["videoId"], title: array["items"][i]["snippet"]["title"], thumbnail_url: array["items"][i]["snippet"]["thumbnails"]["medium"]["url"], category:@input)
       i+=1
     end
