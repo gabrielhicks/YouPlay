@@ -1,19 +1,18 @@
 <div class="landing_page">
 
-
   <div class="pills">
     <% cate = [] %>
     <% @videos.each do |video| %>
       <% cate << video.category %>
     <% end %>
     <%cate.uniq.each do |c| %>
-      <a href="/videos" class="badge badge-pill pill"><%= c %></a>
+      <a href="/videos" class="badge badge-pill pill animated"><%= c %></a>
     <% end %>
   </div>
 
   <div class="searchbar">
     <%= form_tag "/search" do %>
-        <%= text_field_tag :input, "", class: 'inputbox'%>
+        <%= text_field_tag :input, "", class: 'inputbox',placeholder:"Music..."%>
         <%= submit_tag "Search", class:"searchbutton" %>
     <% end %>
   </div>
@@ -22,7 +21,7 @@
 </div>
 
 
-<div class="indexpage">
+<div class="indexpage" id="indexpage">
   <% @videos.each do |video| %>
     <div class="card">
         <a href="/videos/<%= video.id %>">

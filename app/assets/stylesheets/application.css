@@ -28,13 +28,15 @@
   margin-top:3vh;
 }
 
+
+
 .inputbox{
   border-radius: 20px;
   padding: 3px;
   padding-left: 10px;
   letter-spacing: 2px;
   font-weight: 600;
-  margin-right: 20px;
+  margin-right: 10px;
   border: 0.5px solid lightgrey;
   transition: 1s;
 }
@@ -46,6 +48,7 @@
   font-weight: 700;
   color: white;
   transition: 1s;
+  font-size: 1.2em;
 }
 .inputbox:hover, .searchbutton:hover{
   transform: scale(1.1);
@@ -55,11 +58,11 @@
 .pills{
   margin-left: 15vw;
   padding-top: 30vh;
-
+  margin-right: 10vw;
 }
 
 .pill{
-  margin: 3px;
+  margin: 5px;
   position: relative;
 }
 
@@ -114,12 +117,32 @@
 
 .landing_page a{
   transition: 1s;
+  font-size: 1.3em;
+  background: rgba(122, 218, 70, 1);
+  color: white;
 }
 
-.landing_page a:hover{
-  transform: scale(1.1);
+
+.animated {
+  animation: myAnimated 4s ease-in-out;
+  animation-iteration-count: infinite;
+  text-align: center;
 }
 
+@keyframes myAnimated{
+  from{
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  50%{
+    opacity: .7;
+    transform: translateY(5px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
 
 
 
