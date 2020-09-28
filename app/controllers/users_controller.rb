@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     if @user.valid?
       session[:user] = @user.id
-      redirect_to user_path(@user)
+      redirect_to videos_path
     else
       redirect_to new_user_path
     end
@@ -40,6 +40,8 @@ class UsersController < ApplicationController
     if @user && @user.authenticate(params[:password])
         session[:user] = @user.id
         redirect_to videos_path
+    elsif !@user
+      redirect_to new_user_path
     else
         flash[:message] = "Incorrect Username or Password"
         redirect_to login_path
@@ -49,7 +51,7 @@ class UsersController < ApplicationController
 
   def logout
     session[:user] = nil
-    redirect_to login_path
+    redirect_to videos_path
   end
 
 

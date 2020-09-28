@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-
+  skip_before_action :authorized, only: [:index, :show, :search, :handle_search]
   def index
     @videos = Video.all
   end
