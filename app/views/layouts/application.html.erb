@@ -23,6 +23,7 @@
       <%= link_to "Log Out", "/logout", method: :delete %>
       <% else %>
         <%= link_to "Log In", login_path%>
+        <a href="/users/new">Sign Up</a>
       <% end %>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
