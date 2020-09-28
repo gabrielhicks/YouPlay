@@ -1,6 +1,6 @@
 class Video < ApplicationRecord
-    has_many :comments
-    has_many :playlists
+    has_many :playlist_videos
+    has_many :playlists, through: :playlist_videos
 
     def category_videos
         video_array = []
