@@ -5,7 +5,7 @@ class PlaylistsController < ApplicationController
     @playlist = Playlist.new
   end
 
-  def show
+  def index
     @playlists = @current_user.playlists
   end
 

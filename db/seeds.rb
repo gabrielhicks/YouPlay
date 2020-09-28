@@ -44,8 +44,11 @@
 #     j+=1
 # end
 ################################################################################
+PlaylistVideo.destroy_all
+Playlist.destroy_all
+
 user1 = User.first
-user2 = User.second
+user2 = User.third
 video1 = Video.first
 video2 = Video.second
 video3 = Video.third
