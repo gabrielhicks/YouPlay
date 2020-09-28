@@ -49,10 +49,9 @@ ActiveRecord::Schema.define(version: 2020_09_28_154331) do
     t.string "video_id"
     t.string "title"
     t.string "thumbnail_url"
-    t.integer "category_id"
+    t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["category_id"], name: "index_videos_on_category_id"
   end
 
   add_foreign_key "comments", "users"
