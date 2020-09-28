@@ -36,9 +36,10 @@ class UsersController < ApplicationController
 
 
   def handle_login
+    @user = User.find_by(username: params[:username])
     if @user && @user.authenticate(params[:password])
         session[:user] = @user.id
-        redirect_to candles_path
+        redirect_to videos_path
     else
         flash[:message] = "Incorrect Username or Password"
         redirect_to login_path

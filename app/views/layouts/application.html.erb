@@ -10,7 +10,24 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
   <body class="slideToLeft">
+    <div class="topnav" id="myTopnav">
+      <a href="/videos" class="active">Home</a>
+      <a href="/profile">Profile</a>
+      <a href="/playlists">Playlists</a>
+      <% if logged_in? %>
+      <%= link_to "Log Out", "/logout", method: :delete %>
+      <% else %>
+        <%= link_to "Log In", login_path%>
+      <% end %>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+  </a>
+</div>
     <%= yield %>
   </body>
 </html>
