@@ -28,6 +28,18 @@
   margin-top:3vh;
 }
 
+.searchbutton{
+  border-radius: 20px;
+  background: #0dcbff;
+  border: 0px;
+  font-weight: 700;
+  color: white;
+  transition: 1s;
+}
+.searchbutton:hover{
+  transform: scale(1.1);
+}
+
 /* pills */
 .pills{
   margin-left: 15vw;
