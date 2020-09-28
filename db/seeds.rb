@@ -48,7 +48,7 @@ PlaylistVideo.destroy_all
 Playlist.destroy_all
 
 user1 = User.first
-user2 = User.third
+user2 = User.second
 video1 = Video.first
 video2 = Video.second
 video3 = Video.third
