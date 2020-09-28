@@ -19,7 +19,7 @@
       <% if logged_in? %>
       <a href="/videos" class="active">Home</a>
       <%= link_to "Log Out", "/logout", method: :delete %>
-      <a href="/playlists">Playlists</a>
+      <%= link_to "Playlists", playlist_path(session[:user])%>
       <%= link_to "Profile", user_path(session[:user])%>
       <% else %>
         <a href="/users" class="active2">Sign Up</a>

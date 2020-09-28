@@ -6,6 +6,7 @@ class PlaylistsController < ApplicationController
   end
 
   def show
+    @playlists = @current_user.playlists
   end
 
   def create
