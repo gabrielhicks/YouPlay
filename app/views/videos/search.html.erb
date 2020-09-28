@@ -1,0 +1,9 @@
+
+<%@playlist %>
+
+
+<%= form_tag "/search" do  %>
+    <%= label_tag "search" %>
+    <%= text_field_tag :input %>
+    <%= submit_tag "Search!" %>
+<% end %>
