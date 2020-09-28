@@ -38,6 +38,13 @@
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
+  float: left;
+  background-color: rgb(46, 163, 247);
+  color: white;
+}
+
+.topnav a.active2 {
+  float: right;
   background-color: rgb(46, 163, 247);
   color: white;
 }

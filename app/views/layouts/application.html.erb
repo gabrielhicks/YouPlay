@@ -18,11 +18,11 @@
     <div class="topnav" id="myTopnav">
       <% if logged_in? %>
       <a href="/videos" class="active">Home</a>
-      <a href="/profile">Profile</a>
-      <a href="/playlists">Playlists</a>
       <%= link_to "Log Out", "/logout", method: :delete %>
+      <a href="/playlists">Playlists</a>
+      <a href="/profile">Profile</a>
       <% else %>
-        <a href="/users" class="active">Sign Up</a>
+        <a href="/users" class="active2">Sign Up</a>
         <%= link_to "Log In", login_path%>
       <% end %>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
