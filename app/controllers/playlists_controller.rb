@@ -13,7 +13,7 @@ class PlaylistsController < ApplicationController
     playlist = @current_user.playlists.create(playlist_params)
 
     if playlist.valid?
-      redirect_to playlist_path(user.playlist)
+      redirect_to playlists_path
     else
       flash[:errors] = playlist.errors.full_messages
       redirect_to new_playlist_path
