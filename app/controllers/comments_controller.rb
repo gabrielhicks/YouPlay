@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :find_comment, only: [:show, :edit, :update, :destroy]
+  before_action :find_comment, only: [:edit, :update, :destroy]
 
   def new
     @comment = Comment.new

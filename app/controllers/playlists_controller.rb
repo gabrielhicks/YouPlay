@@ -1,5 +1,5 @@
 class PlaylistsController < ApplicationController
-  before_action :find_playlist, only: [:show, :edit, :update, :destroy]
+  before_action :find_playlist, only: [:edit, :update, :destroy]
 
   def new
     @playlist = Playlist.new
@@ -35,7 +35,7 @@ class PlaylistsController < ApplicationController
   private
 
   def playlist_params
-    params.require(:playlist).permit(:user_id, :video_id, :name)
+    params.require(:playlist).permit(:name)
   end
 
   def find_playlist
