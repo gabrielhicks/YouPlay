@@ -43,3 +43,16 @@
 #         end
 #     j+=1
 # end
+################################################################################
+user1 = User.first
+user2 = User.second
+video1 = Video.first
+video2 = Video.second
+video3 = Video.third
+video4 = Video.fourth
+playlist1 = Playlist.create(name: "First", user: user1)
+playlist2 = Playlist.create(name: "Second", user: user2)
+playlistvideo1 = PlaylistVideo.create(playlist: playlist1, video: video1)
+playlistvideo2 = PlaylistVideo.create(playlist: playlist2, video: video2)
+playlistvideo3 = PlaylistVideo.create(playlist: playlist1, video: video3)
+playlistvideo4 = PlaylistVideo.create(playlist: playlist2, video: video4)
