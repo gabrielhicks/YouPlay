@@ -177,16 +177,16 @@
 } */
 
 
-
-.previous{
-  left:3vw;
-  top: 40vh;
-  position: absolute;
-  color:lightgrey;
-  font-weight: 700;
-  transition: 0.5s;
-  opacity: 0.2;
-  transform: translateX(10px);
+.card{
+  margin: 20px;
+  display:flex;
+  float: left;
+  max-height: 250px;
+  min-height: 250px;
+  max-width: 250px;
+  min-width: 250px;
+  border-radius: 10px;
+  transition: 1s;
 }
 .next{
   right:3vw;
