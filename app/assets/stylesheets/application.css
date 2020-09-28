@@ -13,51 +13,162 @@
  *= require_tree .
  *= require_self
  */
-body {
-  margin: auto;
-  width: 90%;
+.indexpage{
+   margin: auto;
+   width: 90%;
+ }
+
+ .landing_page{
+   height: 100vh;
+   margin: auto;
+   width: 100%;
+ }
+.searchbar{
+  margin-left: 15vw;
+  margin-top:3vh;
 }
 
-.card {
-  width: 19%;
-  margin: 0.5%;
-  float: left;
+.inputbox{
   border-radius: 20px;
+  padding: 3px;
+  padding-left: 10px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-right: 20px;
+  border: 0.5px solid lightgrey;
   transition: 1s;
-  justify-content: center;
 }
 
-.card:hover {
-  transform: scale(1.03);
-}
-
-.card-text {
-  font-size: 8pt;
-  padding-bottom: 2%;
-  position: absolute;
-  background-color: white;
-  bottom: 0;
-  text-align: center;
-  color: black;
-  opacity: 0;
-  padding: 5px;
+.searchbutton{
   border-radius: 20px;
-  transition: 300ms;
-  width: 100%;
+  background: #0dcbff;
+  border: 0px;
   font-weight: 700;
-  transform: translateY(50%) scale(0.3) rotateX(90deg);
+  color: white;
+  transition: 1s;
+}
+.inputbox:hover, .searchbutton:hover{
+  transform: scale(1.1);
 }
 
-.card:hover .card-text {
-  opacity: .85;
-  transform: translateY(0px);
-  width: 100%;
+/* pills */
+.pills{
+  margin-left: 15vw;
+  padding-top: 30vh;
+
 }
 
-.btn {
-  width: 100%;
-  letter-spacing: 10px;
+.pill{
+  margin: 3px;
+  position: relative;
 }
+
+.landing_page a:nth-of-type(1){
+  background:rgb(46, 163, 247);
+  color: white;
+}
+
+.landing_page a:nth-of-type(2){
+  background:rgb(81, 241, 55);
+  color: white;
+}
+
+.landing_page a:nth-of-type(3){
+  background:rgb(250, 255, 25);
+  color: black;
+}
+
+.landing_page a:nth-of-type(4){
+  background:rgb(255, 46, 25);
+  color: white;
+}
+
+.landing_page a:nth-of-type(5){
+  background:rgb(25, 255, 221);
+  color: white;
+}
+
+.landing_page a:nth-of-type(6){
+  background:rgb(168, 25, 255);
+  color: white;
+}
+.landing_page a:nth-of-type(7){
+  background:rgb(255, 25, 143);
+  color: white;
+}
+
+.landing_page a:nth-of-type(8){
+  background:rgb(25, 255, 241);
+  color: white;
+}
+
+.landing_page a:nth-of-type(9){
+  background:rgb(255, 198, 25);
+  color: white;
+}
+
+.landing_page a:nth-of-type(10){
+  background:rgb(255, 115, 25);
+  color: white;
+}
+
+.landing_page a{
+  transition: 1s;
+}
+
+.landing_page a:hover{
+  transform: scale(1.1);
+}
+
+
+
+
+ .card{
+   width: 19%;
+   margin:0.5%;
+   float: left;
+   border-radius: 20px;
+   transition: 1s;
+   justify-content: center;
+ }
+ .card:hover{
+   transform: scale(1.03);
+ }
+
+ .card-show{
+   width: 19%;
+   margin:0.5%;
+   border-radius: 20px;
+   transition: 1s;
+   justify-content: center;
+ }
+
+.card-text{
+   font-size: 8pt;
+   padding-bottom: 2%;
+   position: absolute;
+   background-color: white;
+   bottom:0;
+   text-align: center;
+   color: black;
+   opacity: 0;
+   padding:5px;
+   border-radius: 20px;
+   transition: 300ms;
+   width: 100%;
+   font-weight: 700;
+   transform: translateY(50%) scale(0.3) rotateX(90deg);
+ }
+ .card:hover .card-text{
+   opacity: .85;
+   transform: translateY(0px);
+   width: 100%;
+ }
+
+.btn{
+   width: 100%;
+     letter-spacing: 10px;
+ }
 
 /* .card{
   display: flex;
@@ -66,7 +177,33 @@ body {
 } */
 
 
-iframe {
+.card{
+  margin: 20px;
+  display:flex;
+  float: left;
+  max-height: 250px;
+  min-height: 250px;
+  max-width: 250px;
+  min-width: 250px;
+  border-radius: 10px;
+  transition: 1s;
+}
+.next{
+  right:3vw;
+  top: 40vh;
+  position: absolute;
+  color:lightgrey;
+  font-weight: 700;
+  transition: 0.5s;
+  opacity: 0.2;
+  transform: translateX(-10px);
+}
+.previous:hover, .next:hover{
+  text-decoration: none;
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+iframe{
   height: 80vh;
 }
 
@@ -80,27 +217,26 @@ img {
 
 
 @media only screen and (max-width: 1500px) {
-  .card {
+  .card{
     width: 24%;
-    margin: .5%;
+    margin:.5%;
 
   }
 }
 
 
 @media only screen and (max-width: 1000px) {
-  .card {
+  .card{
     width: 48%;
-    margin: 1%;
+    margin:1%;
 
   }
 }
 
 @media only screen and (max-width: 780px) {
-  .card {
+  .card{
     width: 98%;
-    margin: 1%;
-
+    margin:1%;
   }
 }
 
@@ -108,16 +244,16 @@ img {
 
 /* page transition*/
 
-.slideToLeft {
-  animation: transitionLeft 2000ms;
-  animation-iteration-count: 1;
+.slideToLeft{
+  animation: transitionLeft 800ms;
+  animation-iteration-count:1;
   animation-fill-mode: forwards;
 }
 
 @keyframes transitionLeft {
   from {
     opacity: 0;
-    transform: translateX(2000px);
+    transform: translateX(100%);
   }
 
   to {

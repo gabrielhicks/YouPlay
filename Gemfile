@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
-
+# Environmental Variables for API key and secrets
+gem 'dotenv-rails', groups: [:development, :test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 # Use sqlite3 as the database for Active Record
@@ -57,8 +58,5 @@ end
 gem 'tzinfo-data', '>= 1.2016.7'
 
 # Use for YT APP API
-gem 'dotenv'
-gem 'google-api-client'
-gem 'google-id-token'
 gem 'rest-client'
 gem 'pry'
