@@ -10,7 +10,12 @@ class VideosController < ApplicationController
   end
 
   def search
-    @input = "popmusic"
+
+  end
+
+  def handle_search
+    @input = (params[:input])
+    byebug
     @playlist = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q='+@input+'&key=AIzaSyBuVA_lzCCxno3CnOYXp3LQRJb7tgoc8ZU')
     array = JSON.parse(@playlist)
 
@@ -19,6 +24,7 @@ class VideosController < ApplicationController
       Video.create(video_id: array["items"][i]["id"]["videoId"], title: array["items"][i]["snippet"]["title"], thumbnail_url: array["items"][i]["snippet"]["thumbnails"]["medium"]["url"], category:@input)
       i+=1
     end
+    redirect_to videos_path
   end
 
 
