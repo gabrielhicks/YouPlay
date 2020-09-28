@@ -13,8 +13,10 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     if @user.valid?
       session[:user] = @user.id
+      flash[:message] = "#{@user.name} has successfully logged in!"
       redirect_to videos_path
     else
+      flash[:errors] = @user.errors.full_messages
       redirect_to new_user_path
     end
   end
@@ -40,8 +42,6 @@ class UsersController < ApplicationController
     if @user && @user.authenticate(params[:password])
         session[:user] = @user.id
         redirect_to videos_path
-    elsif !@user
-      redirect_to new_user_path
     else
         flash[:message] = "Incorrect Username or Password"
         redirect_to login_path

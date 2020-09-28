@@ -1,3 +1,9 @@
+<ul>
+<% if flash[:message] %>
+        <li style="color:red;"><%= flash[:message] %></li>
+<% end %>
+</ul>
+
 <%= form_for @user do |f| %>
     <%= f.label :username %>
     <%= f.text_field :username %>
