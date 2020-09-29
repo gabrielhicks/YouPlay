@@ -149,6 +149,7 @@ html{
   background: transparent;
   transition: 1s;
   width:100%;
+  outline:none;
 }
 
 .login-box:hover{
@@ -166,6 +167,7 @@ html{
   font-size: 15pt;
   font-weight: 700;
   transition: 1s;
+  outline:none;
 }
 
 .login-button:hover{
@@ -280,6 +282,7 @@ body:after {
   margin-right: 10px;
   border: 0.5px solid lightgrey;
   transition: 1s;
+  outline:none;
 }
 
 .searchbutton{
@@ -293,6 +296,7 @@ body:after {
   padding: 3px;
   padding-left: 13px;
   padding-right: 13px;
+  outline:none;
 }
 .inputbox:hover, .searchbutton:hover{
   transform: scale(1.1);
@@ -473,6 +477,11 @@ body:after {
   transform: scale(1.2);
   opacity: 0.8;
 }
+
+
+
+
+
 iframe{
   height: 80vh;
 }

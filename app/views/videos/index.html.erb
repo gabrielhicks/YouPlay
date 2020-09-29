@@ -16,9 +16,10 @@
     <% end %>
   </div>
 
-<h3>Videos: </h3>
-<hr>
+
 <div class="indexpage" id="indexpage">
+  <h3>Videos: </h3>
+  <hr>
   <% @videos.last(20).each do |video| %>
     <div class="card-index firstone">
         <a href="/videos/<%= video.id %>">

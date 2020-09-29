@@ -1,13 +1,19 @@
 class PlaylistsController < ApplicationController
   before_action :find_playlist, only: [:edit, :update, :destroy]
 
+  def index
+    @playlists = @current_user.playlists
+  end
+
+  def show
+    @playlist = Playlist.find(params[:id])
+  end
+
   def new
     @playlist = Playlist.new
   end
 
-  def index
-    @playlists = @current_user.playlists
-  end
+
 
   def create
     playlist = @current_user.playlists.create(playlist_params)
