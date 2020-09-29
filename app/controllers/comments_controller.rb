@@ -9,6 +9,10 @@ class CommentsController < ApplicationController
   def create
     @video = Video.find(params[:video_id]) 
     @comment = @video.comments.create(comment_params)
+    # respond_to do |format|
+    #   format.js
+    #   format.html {redirect_to comments_url}
+    # end
     # redirect_to video_path(@video)
   end
 
