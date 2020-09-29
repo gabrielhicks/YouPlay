@@ -13,10 +13,10 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     if @user.valid?
       session[:user] = @user.id
-      flash[:message] = "#{@user.name} has successfully logged in!"
-      redirect_to videos_path
+      flash[:success] = "You have successfully create an account for #{@user.name}! Yeah!"
+      redirect_to user_path(@user)
     else
-      flash[:errors] = @user.errors.full_messages
+      flash[:login_error] = @user.errors.full_messages
       redirect_to new_user_path
     end
   end
@@ -40,10 +40,11 @@ class UsersController < ApplicationController
   def handle_login
     @user = User.find_by(username: params[:username])
     if @user && @user.authenticate(params[:password])
+        flash[:success] = "Welcome back, #{@user.name}!"
         session[:user] = @user.id
-        redirect_to videos_path
+        redirect_to user_path(@user)
     else
-        flash[:message] = "Incorrect Username or Password"
+        flash[:errors] = "Incorrect Username or Password"
         redirect_to login_path
     end
   end

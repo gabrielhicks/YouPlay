@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
-/* Add a black background color to the top navigation */
+
+/*nav bar*/
+
 .topnav {
   background-color: #333;
   overflow: hidden;
@@ -57,7 +59,7 @@
 .row {
   margin: auto;
   width: 90%;
-  
+
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
@@ -110,6 +112,88 @@
 
 
 
+
+
+.login-form {
+  width: 300px;
+  margin-left: 40%;
+  margin-top: 300px;
+  border-radius: 20px;
+}
+
+.login-box {
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  padding: 2px;
+  padding-left: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin: 5px;
+  font-size: 11pt;
+  background: transparent;
+  transition: 1s;
+  width: 100%;
+}
+
+.login-box:hover {
+  transform: scale(1.03);
+
+}
+
+
+.login-button {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 20px;
+  border: none;
+  margin-left: 5px;
+  font-size: 15pt;
+  font-weight: 700;
+  transition: 1s;
+}
+
+.login-button:hover {
+  transform: scale(1.03);
+  background-color: rgb(46, 204, 238);
+  letter-spacing: 4px;
+  color: white;
+}
+
+.indexpage {
+  margin: auto;
+  width: 90%;
+}
+
+.searchbar {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60vh;
+}
+
+body:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 13px;
+  z-index: 1000000;
+}
+
+.sticky-navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 .inputbox {
   border-radius: 20px;
   padding: 3px;
@@ -148,57 +232,57 @@
   position: relative;
 }
 
-.landing_page a:nth-of-type(1) {
+.pills a:nth-of-type(1) {
   background: rgb(46, 163, 247);
   color: white;
 }
 
-.landing_page a:nth-of-type(2) {
+.pills a:nth-of-type(2) {
   background: rgb(81, 241, 55);
   color: white;
 }
 
-.landing_page a:nth-of-type(3) {
+.pills a:nth-of-type(3) {
   background: rgb(250, 255, 25);
   color: black;
 }
 
-.landing_page a:nth-of-type(4) {
+.pills a:nth-of-type(4) {
   background: rgb(255, 46, 25);
   color: white;
 }
 
-.landing_page a:nth-of-type(5) {
+.pills a:nth-of-type(5) {
   background: rgb(25, 255, 221);
   color: white;
 }
 
-.landing_page a:nth-of-type(6) {
+.pills a:nth-of-type(6) {
   background: rgb(168, 25, 255);
   color: white;
 }
 
-.landing_page a:nth-of-type(7) {
+.pills a:nth-of-type(7) {
   background: rgb(255, 25, 143);
   color: white;
 }
 
-.landing_page a:nth-of-type(8) {
+.pills a:nth-of-type(8) {
   background: rgb(25, 255, 241);
   color: white;
 }
 
-.landing_page a:nth-of-type(9) {
+.pills a:nth-of-type(9) {
   background: rgb(255, 198, 25);
   color: white;
 }
 
-.landing_page a:nth-of-type(10) {
+.pills a:nth-of-type(10) {
   background: rgb(255, 115, 25);
   color: white;
 }
 
-.landing_page a {
+.pills a {
   transition: 1s;
   font-size: 1.3em;
   background: rgba(122, 218, 70, 1);
@@ -231,17 +315,20 @@
 
 
 
-.card {
+.card-index {
   width: 19%;
   margin: 0.5%;
   float: left;
   border-radius: 20px;
   transition: 1s;
   justify-content: center;
+
 }
 
-.card:hover {
+.card-index:hover {
   transform: scale(1.03);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.09),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.09);
 }
 
 .card-show {
@@ -269,7 +356,7 @@
   transform: translateY(50%) scale(0.3) rotateX(90deg);
 }
 
-.card:hover .card-text {
+.card-index:hover .card-text {
   opacity: .85;
   transform: translateY(0px);
   width: 100%;
@@ -340,7 +427,7 @@ img {
 
 
 @media only screen and (max-width: 1000px) {
-  .card {
+  .card-index {
     width: 48%;
     margin: 1%;
 
@@ -348,7 +435,7 @@ img {
 }
 
 @media only screen and (max-width: 780px) {
-  .card {
+  .card-index {
     width: 98%;
     margin: 1%;
   }
