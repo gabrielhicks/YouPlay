@@ -13,19 +13,142 @@
  *= require_tree .
  *= require_self
  */
-.indexpage{
+
+/*nav bar*/
+
+
+
+
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  float: left;
+  background-color: rgb(46, 163, 247);
+  color: white;
+}
+
+.topnav a.active2 {
+  float: right;
+  background-color: rgb(46, 163, 247);
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.row {
+  margin: auto;
+  width: 90%;
+
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+.indexpage {
+  margin: auto;
+  width: 90%;
+}
+
+.landing_page {
+  height: 100vh;
+  margin: auto;
+  width: 100%;
+}
+
+.searchbar {
+  margin-left: 15vw;
+  margin-top: 3vh;
+}
+
+
+
+
+
+ .indexpage{
    margin: auto;
    width: 90%;
  }
-
- .landing_page{
-   height: 100vh;
-   margin: auto;
-   width: 100%;
- }
 .searchbar{
-  margin-left: 15vw;
-  margin-top:3vh;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60vh;
+}
+
+body:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.sticky{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 13px;
+  z-index: 1000000;
+}
+.sticky-navbar{
+  position: -webkit-sticky;
+  position: sticky;
+  top:0;
+  z-index: 100;
 }
 
 .inputbox{
@@ -34,7 +157,7 @@
   padding-left: 10px;
   letter-spacing: 2px;
   font-weight: 600;
-  margin-right: 20px;
+  margin-right: 10px;
   border: 0.5px solid lightgrey;
   transition: 1s;
 }
@@ -46,6 +169,7 @@
   font-weight: 700;
   color: white;
   transition: 1s;
+  font-size: 1.2em;
 }
 .inputbox:hover, .searchbutton:hover{
   transform: scale(1.1);
@@ -55,84 +179,107 @@
 .pills{
   margin-left: 15vw;
   padding-top: 30vh;
-
+  margin-right: 10vw;
 }
 
 .pill{
-  margin: 3px;
+  margin: 5px;
   position: relative;
 }
 
-.landing_page a:nth-of-type(1){
+.pills a:nth-of-type(1){
   background:rgb(46, 163, 247);
   color: white;
 }
 
-.landing_page a:nth-of-type(2){
+.pills a:nth-of-type(2){
   background:rgb(81, 241, 55);
   color: white;
 }
 
-.landing_page a:nth-of-type(3){
+.pills a:nth-of-type(3){
   background:rgb(250, 255, 25);
   color: black;
 }
 
-.landing_page a:nth-of-type(4){
+.pills a:nth-of-type(4){
   background:rgb(255, 46, 25);
   color: white;
 }
 
-.landing_page a:nth-of-type(5){
+.pills a:nth-of-type(5){
   background:rgb(25, 255, 221);
   color: white;
 }
 
-.landing_page a:nth-of-type(6){
+.pills a:nth-of-type(6){
   background:rgb(168, 25, 255);
   color: white;
 }
-.landing_page a:nth-of-type(7){
+.pills a:nth-of-type(7){
   background:rgb(255, 25, 143);
   color: white;
 }
 
-.landing_page a:nth-of-type(8){
+.pills a:nth-of-type(8){
   background:rgb(25, 255, 241);
   color: white;
 }
 
-.landing_page a:nth-of-type(9){
+.pills a:nth-of-type(9){
   background:rgb(255, 198, 25);
   color: white;
 }
 
-.landing_page a:nth-of-type(10){
+.pills a:nth-of-type(10){
   background:rgb(255, 115, 25);
   color: white;
 }
 
-.landing_page a{
+.pills a{
   transition: 1s;
+  font-size: 1.3em;
+  background: rgba(122, 218, 70, 1);
+  color: white;
 }
 
-.landing_page a:hover{
-  transform: scale(1.1);
+
+.animated {
+  animation: myAnimated 4s ease-in-out;
+  animation-iteration-count: infinite;
+  text-align: center;
+}
+
+@keyframes myAnimated{
+  from{
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  50%{
+    opacity: .7;
+    transform: translateY(5px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(-10px);
+  }
 }
 
 
 
-
- .card{
+ .card-index{
    width: 19%;
    margin:0.5%;
    float: left;
    border-radius: 20px;
    transition: 1s;
    justify-content: center;
+
  }
- .card:hover{
+ .card-index:hover{
    transform: scale(1.03);
+   box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.09),
+        -5px -5px 30px 15px rgba(0, 0, 0, 0.09);
  }
 
  .card-show{
@@ -159,7 +306,7 @@
    font-weight: 700;
    transform: translateY(50%) scale(0.3) rotateX(90deg);
  }
- .card:hover .card-text{
+ .card-index:hover .card-text{
    opacity: .85;
    transform: translateY(0px);
    width: 100%;
@@ -177,16 +324,16 @@
 } */
 
 
-.card{
-  margin: 20px;
-  display:flex;
-  float: left;
-  max-height: 250px;
-  min-height: 250px;
-  max-width: 250px;
-  min-width: 250px;
-  border-radius: 10px;
-  transition: 1s;
+
+.previous{
+  left:3vw;
+  top: 40vh;
+  position: absolute;
+  color:lightgrey;
+  font-weight: 700;
+  transition: 0.5s;
+  opacity: 0.2;
+  transform: translateX(10px);
 }
 .next{
   right:3vw;
@@ -226,7 +373,7 @@ img{
 
 
 @media only screen and (max-width: 1000px) {
-  .card{
+  .card-index{
     width: 48%;
     margin:1%;
 
@@ -234,7 +381,7 @@ img{
 }
 
 @media only screen and (max-width: 780px) {
-  .card{
+  .card-index{
     width: 98%;
     margin:1%;
   }

@@ -10,7 +10,38 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <body class="slideToLeft">
+    <div class="topnav" id="myTopnav">
+      <% if logged_in? %>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+        <a href="/videos" class="active">Home</a>
+        <%= link_to "Log Out", logout_path, method: :delete %>
+        <%= link_to "Playlists", playlists_path%>
+        <%= link_to "Profile", user_path(session[:user])%>
+      <% else %>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+        <a href="/users" class="active2">Sign Up</a>
+        <%= link_to "Log In", login_path%>
+      <% end %>
+</div>
     <%= yield %>
   </body>
+
+  <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 </html>

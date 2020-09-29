@@ -1,5 +1,4 @@
 class VideosController < ApplicationController
-
   def index
     @videos = Video.all
   end
@@ -27,7 +26,4 @@ class VideosController < ApplicationController
     end
     redirect_to videos_path
   end
-
-
-
 end
