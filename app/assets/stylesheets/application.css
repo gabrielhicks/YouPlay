@@ -63,6 +63,8 @@ aside {
     padding: 10px;
     border-radius: 20px;
     background: transparent;
+    outline: none;
+    resize: none;
     }
 
   .seecomment {
