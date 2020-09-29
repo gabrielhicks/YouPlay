@@ -2,4 +2,14 @@
   <p style="color:green;"><%= flash[:success] %></p>
 <% end %>
 
-<%= @user.name %>
+<h1><%= @user.username %></h1>
+<br>
+<h3>Full Name: <%= @user.name %></h3>
+<br>
+<h5>Stats:</h5>
+<p>Comments: <%= @user.comments.count %></p>
+<p>Videos Watched: <%%></p>
+<p>Videos Liked: <%%></p>
+<br>
+<hr>
+<%=link_to "Edit Profile", edit_user_path%>
