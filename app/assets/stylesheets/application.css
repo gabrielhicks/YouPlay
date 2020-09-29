@@ -59,10 +59,10 @@ aside {
     text-indent: 1vh;
     position: right;
     width: 100%;
-    height: 125px;
+    height: 100px;
     padding: 10px;
-    background-color: #bdf1ff72;
     border-radius: 20px;
+    background: transparent;
     }
 
     .commentbutton {
