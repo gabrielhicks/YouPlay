@@ -112,14 +112,29 @@
 
 
 
-
-
-.login-form{
-  width:300px;
-  margin-left:40%;
-  margin-top: 300px;
-  border-radius: 20px;
+.logintext{
+  letter-spacing: 3px;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 10px;
 }
+
+.loginform{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formbox{
+  margin-top: 20vh;
+  background: transparent;
+  padding: 30px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.2);
+
+}
+
 
 .login-box{
   border:1px solid lightgrey;

@@ -3,12 +3,15 @@
   <li style="color:red;"><%= flash[:errors] %></li>
 <% end %>
 </ul>
-
-<%= form_tag({action: "login" }, {class:"login-form"} ) do %>
-
+<div class="loginform">
+  <div class="formbox">
+<%= form_tag({action: "login" }) do %>
+    <h4 class="logintext">Login</h4>
     <%= text_field_tag :username, "",class:"login-box",placeholder:"Username" %>
 
     <br>
     <%= password_field_tag :password,"", class:"login-box",placeholder:"Password" %>
     <%= submit_tag "Log in", class:"login-button" %>
 <% end %>
+</div>
+<div>
