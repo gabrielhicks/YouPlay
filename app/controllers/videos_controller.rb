@@ -4,6 +4,7 @@ class VideosController < ApplicationController
     @videos = Video.all
   end
 
+
   def show
     @videos = Video.all
     @video = Video.find(params[:id])
@@ -27,11 +28,5 @@ class VideosController < ApplicationController
     end
     redirect_to videos_path
   end
-
-  def addcomment
-    
-  end
-
-
 
 end

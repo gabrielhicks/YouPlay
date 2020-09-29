@@ -1,0 +1,17 @@
+  <div>
+    <%= form_for([@video, @video.comments.build]) do |f| %>
+        <%= f.hidden_field :user_id, value: session[:user] %>
+        <%= f.hidden_field :video_id, value: @video.id %>
+        <%= f.text_area :content, class:"comment", placeholder:"Comment here..." %>
+        <br>
+  </div>
+        <%= f.submit "Submit", class: "commentbutton" %>
+    <% end %>
+    <hr>
+    <ul>
+    <% if flash[:comment_error] %>
+      <% flash[:comment_error].each do |error|%>
+          <li style="color:red;"><%= error %></li>
+        <% end %>
+    <% end %>
+    </ul>

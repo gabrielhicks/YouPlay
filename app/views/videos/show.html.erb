@@ -22,21 +22,15 @@ gyroscope; picture-in-picture" allowfullscreen></iframe>
 <% end %>
 </section>
 <aside>
+<% @video.comments.each do |comment| %>
+  <form class="seecomment">
+  <hr>
+    <h5><%=link_to comment.user.name, user_path(comment.user) %></h5>
+    <br>
+    <%= comment.content %>
+  </form>
+<% end %>
 <hr>
-  <div>
-    <%= form_tag({action: "addcomment" }) do %>
-        <%= text_area :content, "", class:"comment", placeholder:"Comment here..." %>
-        <br>
-  </div>
-        <%= submit_tag "Submit", class: "commentbutton" %>
-    <% end %>
-    <hr>
-    <ul>
-    <% if flash[:comment_error] %>
-      <% flash[:comment_error].each do |error|%>
-          <li style="color:red;"><%= error %></li>
-        <% end %>
-    <% end %>
-    </ul>
+<%= render partial: 'comments/form' %>
 </aside>
 </div>

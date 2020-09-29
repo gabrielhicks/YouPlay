@@ -1,7 +1,5 @@
-<ul>
-<% if flash[:errors] %>
-    <% flash[:errors].each do |error| %>
-        <li style="color:red;"><%= error %></li>
-    <% end %>
+<%=form_for @comment do |f|%>
+    <%= f.hidden_field :user_id %>
+    <%= f.hidden_field :video_id %>
+    <%= f.text_area :content %>
 <% end %>
-</ul>

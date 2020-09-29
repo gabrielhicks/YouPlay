@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :videos
+  resources :videos do
+    resources :comments
+  end
   resources :users
   resources :playlists
   resources :comments
@@ -9,5 +11,4 @@ Rails.application.routes.draw do
   get "/login", to: "users#login", as: "login"
   post "/login", to: "users#handle_login"
   delete "/logout", to: "users#logout"
-  post "/video", to: "videos#addcomment"
 end
