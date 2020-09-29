@@ -16,6 +16,10 @@
 
 /*nav bar*/
 
+html{
+  scroll-behavior: smooth;
+}
+
 .topnav {
   background-color: #333;
   overflow: hidden;
@@ -99,6 +103,7 @@
   width: 90%;
 }
 
+
 .landing_page {
   height: 100vh;
   margin: auto;
@@ -175,6 +180,47 @@
 
 
 
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
 
 
 
@@ -197,7 +243,7 @@
    width: 90%;
  }
 .searchbar{
-  margin-top: 5px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -244,6 +290,9 @@ body:after {
   color: white;
   transition: 1s;
   font-size: 1.2em;
+  padding: 3px;
+  padding-left: 13px;
+  padding-right: 13px;
 }
 .inputbox:hover, .searchbutton:hover{
   transform: scale(1.1);
@@ -252,7 +301,7 @@ body:after {
 /* pills */
 .pills{
   margin-left: 15vw;
-  padding-top: 30vh;
+  padding-top: 20vh;
   margin-right: 10vw;
 }
 
@@ -458,6 +507,17 @@ img{
   .card-index{
     width: 98%;
     margin:1%;
+  }
+  .searchbar{
+    top: 13px;
+
+  }
+  .inputbox{
+    font-size: 10pt;
+
+  }
+  .searchbutton{
+    font-size: 10pt;
   }
 }
 
