@@ -20,7 +20,6 @@
 # @youtube10 = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=Vanilla+CSS+Tutorial&key='+@key)
 
 # @yt1 = JSON.parse(@youtube1)
-# binding.pry
 # @yt2 = JSON.parse(@youtube2)
 # @yt3 = JSON.parse(@youtube3)
 # @yt4 = JSON.parse(@youtube4)
@@ -43,7 +42,7 @@
 #         end
 #     j+=1
 # end
-################################################################################
+# ################################################################################
 PlaylistVideo.destroy_all
 Playlist.destroy_all
 
