@@ -8,8 +8,8 @@ class CommentsController < ApplicationController
 
   def create
     @video = Video.find(params[:video_id]) 
-      @comment = @video.comments.create(comment_params)
-    redirect_to video_path(@video)
+    @comment = @video.comments.create(comment_params)
+    redirect_back(fallback_location: videos_path(@video))
   end
 
   def edit
