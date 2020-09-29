@@ -14,6 +14,63 @@
  *= require_self
  */
 
+
+/*playing with comments*/
+.default {
+  background: none;
+  color: #666;
+}
+
+/* .group:before,
+.group:after {
+  content: "";
+  display: table;
+} */
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  background: none;
+  border-radius: 6px;
+  clear: both;
+  *zoom: 1;
+}
+
+.group,
+section,
+aside {
+  margin: 0 1.5% 24px 1.5%;
+}
+
+section {
+  float: left;
+  width: 35%;
+}
+
+aside {
+  float: right;
+  width: 55%;
+}
+  .comment {
+    letter-spacing: 2px;
+    padding: 3px;
+    text-indent: 1vh;
+    position: right;
+    width: 100%;
+    height: 125px;
+    padding: 10px;
+    background-color: #bdf1ff72;
+    border-radius: 20px;
+    }
+
+    .commentbutton {
+  border-radius: 20px;
+  border: 0px;
+  font-weight: 400;
+    }
+
 /*nav bar*/
 
 .topnav {
@@ -331,12 +388,12 @@ body:after {
     -5px -5px 30px 15px rgba(0, 0, 0, 0.09);
 }
 
-.card-show {
-  width: 19%;
-  margin: 0.5%;
-  border-radius: 20px;
-  transition: 1s;
-  justify-content: center;
+ .card-show {
+   width: 100%; 
+   margin: 0.5%;
+  border-radius: 20px; 
+   transition: 1s; 
+   justify-content: center; 
 }
 
 .card-text {

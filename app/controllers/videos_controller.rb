@@ -28,6 +28,10 @@ class VideosController < ApplicationController
     redirect_to videos_path
   end
 
+  def addcomment
+    
+  end
+
 
 
 end

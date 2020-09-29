@@ -3,12 +3,12 @@ frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media
 gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h4><%= @video.title %></h4>
 
-<a href="/videos">Home Page</a><br/>
+<%# <a href="/videos">Home Page</a><br/> %>
 <a class="previous" href="/videos/<%= @video.id-1 %>"><h2><</h2></a><br/>
 <a class="next" href="/videos/<%= @video.id+1 %>"><h2>></h2></a>
 
-
-
+<div class="group">
+<section>
 <% @videos.each do |video| %>
 <div class="card-show">
     <a href="/videos/<%= video.id %>">
@@ -20,3 +20,23 @@ gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </div>
 <% end %>
+</section>
+<aside>
+<hr>
+  <div>
+    <%= form_tag({action: "addcomment" }) do %>
+        <%= text_area :content, "", class:"comment", placeholder:"Comment here..." %>
+        <br>
+  </div>
+        <%= submit_tag "Submit", class: "commentbutton" %>
+    <% end %>
+    <hr>
+    <ul>
+    <% if flash[:comment_error] %>
+      <% flash[:comment_error].each do |error|%>
+          <li style="color:red;"><%= error %></li>
+        <% end %>
+    <% end %>
+    </ul>
+</aside>
+</div>
