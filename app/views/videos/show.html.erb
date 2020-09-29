@@ -26,7 +26,13 @@ gyroscope; picture-in-picture" allowfullscreen></iframe>
 <aside>
 <div id="comment_pane">
 <% @video.comments.each do |comment| %>
-  <%= render 'comments/comment', comment: comment%>
+  <form class="seecomment">
+  <hr>
+    <h5><%=link_to comment.user.name, user_path(comment.user) %></h5>
+    <p style="font-size:x-small"><%= comment.updated_at.strftime('%B %d, %Y at %H:%M %Z') %></p>
+    <br>
+    <%= comment.content %>
+  </form>
 <% end %>
 </div>
 <hr>
