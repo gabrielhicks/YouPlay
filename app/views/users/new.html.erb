@@ -1,20 +1,25 @@
-<ul>
-<% if flash[:login_error] %>
-    <li><%= error %></li>
-<% end %>
-</ul>
 
-<%= form_for @user do |f| %>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-    <br>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <br>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    <br>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-    <%= f.submit %>
-<% end %>
+
+<div class="loginform">
+  <div class="formbox">
+    <%= form_for @user do |f| %>
+    <h4 class="logintext">Register</h4>
+        <%= f.text_field :username, class:"login-box",placeholder:"Username" %>
+        <br>
+        <%= f.text_field :name, class:"login-box",placeholder:"Name"%>
+        <br>
+        <%= f.password_field :password, class:"login-box",placeholder:"Password"%>
+        <br>
+        <%= f.password_field :password_confirmation, class:"login-box",placeholder:"Password Confirmation"%>
+        <%= f.submit class:"login-button" %>
+    <% end %>
+    <hr>
+    <ul>
+    <% if flash[:login_error] %>
+      <% flash[:login_error].each do |error|%>
+          <li style="color:red;"><%= error %></li>
+        <% end %>
+    <% end %>
+    </ul>
+</div>
+<div>

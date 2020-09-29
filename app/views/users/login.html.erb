@@ -1,17 +1,18 @@
-<ul>
-<% if flash[:errors] %>
-  <li style="color:red;"><%= flash[:errors] %></li>
-<% end %>
-</ul>
+
 <div class="loginform">
   <div class="formbox">
-<%= form_tag({action: "login" }) do %>
-    <h4 class="logintext">Login</h4>
-    <%= text_field_tag :username, "",class:"login-box",placeholder:"Username" %>
-
-    <br>
-    <%= password_field_tag :password,"", class:"login-box",placeholder:"Password" %>
-    <%= submit_tag "Log in", class:"login-button" %>
-<% end %>
-</div>
+    <%= form_tag({action: "login" }) do %>
+        <h4 class="logintext">Login</h4>
+        <%= text_field_tag :username, "",class:"login-box",placeholder:"Username" %>
+        <br>
+        <%= password_field_tag :password,"", class:"login-box",placeholder:"Password" %>
+        <%= submit_tag "Log in", class:"login-button" %>
+    <% end %>
+    <hr>
+    <ul>
+    <% if flash[:errors] %>
+      <li style="color:red;"><%= flash[:errors] %></li>
+    <% end %>
+    </ul>
+  </div>
 <div>
