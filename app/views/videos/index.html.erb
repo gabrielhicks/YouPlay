@@ -1,48 +1,31 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>YouPlay</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <div class="pills">
+    <% cate = [] %>
+    <% @videos.each do |video| %>
+      <% cate << video.category %>
+    <% end %>
+    <%cate.uniq.each do |c| %>
+      <a href="/videos" class="badge badge-pill pill animated"><%= c %></a>
+    <% end %>
+  </div>
 
-<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <div class="searchbar sticky">
+    <%= form_tag "/search" do %>
+        <%= text_field_tag :input, "", class: 'inputbox',placeholder:"Music..."%>
+        <%= submit_tag "Search", class:"searchbutton" %>
+    <% end %>
+  </div>
 
+<div class="indexpage">
+  <% @videos.each do |video| %>
+    <div class="card-index">
+        <a href="/videos/<%= video.id %>">
+          <div>
+            <img class = "thumbnail" src="<%= video.thumbnail_url %>" width="100%" height="100%">
+            <p class="card-text"><%= video.title %></p>
+          </div>
+        </a>
 
-  <body class="slideToLeft">
-    <div style="opacity:1.0;" class="topnav" id="myTopnav">
-      <% if logged_in? %>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-      </a>
-      <a href="/videos" class="active">Home</a>
-      <%= link_to "Log Out", logout_path, method: :delete %>
-      <%= link_to "Playlists", playlists_path%>
-      <%= link_to "Profile", user_path(session[:user])%>
-      <% else %>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-      </a>
-        <a href="/users" class="active2">Sign Up</a>
-        <%= link_to "Log In", login_path%>
-      <% end %>
+    </div>
+  <% end %>
 </div>
-    <%= yield %>
-  </body>
-
-  <script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
-</html>

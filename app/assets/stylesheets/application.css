@@ -16,10 +16,6 @@
 
 /*nav bar*/
 
-
-
-
-
 .topnav {
   background-color: #333;
   overflow: hidden;
@@ -113,6 +109,73 @@
   margin-left: 15vw;
   margin-top: 3vh;
 }
+
+
+
+
+
+.login-form{
+  width:300px;
+  margin-left:40%;
+  margin-top: 300px;
+  border-radius: 20px;
+}
+
+.login-box{
+  border:1px solid lightgrey;
+  border-radius: 20px;
+  padding:2px;
+  padding-left: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin: 5px;
+  font-size: 11pt;
+  background: transparent;
+  transition: 1s;
+  width:100%;
+}
+
+.login-box:hover{
+  transform: scale(1.03);
+
+}
+
+
+.login-button{
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 20px;
+  border: none;
+  margin-left: 5px;
+  font-size: 15pt;
+  font-weight: 700;
+  transition: 1s;
+}
+
+.login-button:hover{
+  transform: scale(1.03);
+  background-color: rgb(46, 204, 238);
+  letter-spacing: 4px;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
