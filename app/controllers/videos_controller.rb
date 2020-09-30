@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  skip_before_action :authorized, only: [:index, :show, :search, :handle_search]
+  skip_before_action :authorized, only: [:index, :show, :search, :handle_search, :all]
   def index
     @videos = Video.all
   end
@@ -31,5 +31,9 @@ class VideosController < ApplicationController
       i+=1
     end
     # redirect_to videos_path
+  end
+
+  def all
+    @videos = Video.all.sample(150)
   end
 end
