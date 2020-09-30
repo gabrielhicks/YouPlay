@@ -14,4 +14,8 @@ class ApplicationController < ActionController::Base
     def authorized
         redirect_to new_user_path unless logged_in?
     end
+
+    def current_user?(user)
+        user == @current_user
+    end
 end

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   skip_before_action :authorized, only: [:new, :create, :login, :handle_login]
   before_action :find_user, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update]
 
   def new
       @user = User.new
@@ -25,6 +26,12 @@ class UsersController < ApplicationController
   end
 
   def update
+    if @user.update_attributes(user_params)
+      flash[:success] = "Profile Updated!"
+      redirect_to @user
+    else
+      redirect_to user_path(@current_user)
+    end
   end
 
   def delete
@@ -64,5 +71,10 @@ class UsersController < ApplicationController
 
     def find_user
       @user = User.find_by(id: params[:id])
+    end
+
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(user_path(@current_user)) unless current_user?(@user)
     end
 end
