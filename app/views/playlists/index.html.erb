@@ -2,3 +2,5 @@
 <% @playlists.each do |playlist| %>
   <%= button_to playlist.name, playlist_path(playlist), method: :get%><br>
 <% end %>
+
+<%= button_to "+ New Playlist", new_playlist_path, method: :get %>

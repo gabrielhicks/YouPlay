@@ -1,2 +1,16 @@
-<h1>Playlists#new</h1>
-<p>Find me in app/views/playlists/new.html.erb</p>
+<div>
+  <%= form_for @playlist do |f| %>
+      <br/>
+      <%= f.hidden_field :user_id, value: session[:user] %>
+      <%= f.text_field :name ,placeholder:"New Playlist..."%>
+      <%= f.submit "Create", class: "commentbutton" %>
+  <% end %>
+</div>
+  <hr>
+  <ul>
+  <% if flash[:new_playlist_errors] %>
+    <% flash[:new_playlist_errors].each do |error|%>
+        <li style="color:red;"><%= error %></li>
+      <% end %>
+  <% end %>
+  </ul>

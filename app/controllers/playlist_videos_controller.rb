@@ -9,10 +9,10 @@ class PlaylistVideosController < ApplicationController
       @playlistvideo = PlaylistVideo.create(playlistvideo_params)
 
       if @playlistvideo.valid?
-        flash[:new_playlistvideo_errors] = "New Playlist Created!"
-        redirect_to playlists_path
+        # flash[:new_playlistvideo_errors] = "New Playlist Created!"
+        redirect_to playlist_path(@playlistvideo.playlist_id)
       else
-        flash[:new_playlistvideo_errors] = @playlistvideo.errors.full_messages
+        # flash[:new_playlistvideo_errors] = @playlistvideo.errors.full_messages
         redirect_to new_playlist_video_path
       end
     end
