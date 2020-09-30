@@ -1,7 +1,7 @@
-<br>
-<h3><%= @playlist.name %></h3>
-
 <br/>
+<h3><%= @playlist.name %></h3>
+<hr/>
+
 <% @playlist.playlist_videos.each do |video| %>
   <% videos = Video.all.find_all{|v| v.video_id if v.id == video.id}  %>
     <% videos.each do |vi| %>
