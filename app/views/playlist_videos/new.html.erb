@@ -1,0 +1,13 @@
+<h3>add new video to playlist</h3>
+
+
+<%= @playlist_number %>
+
+<div>
+  <%= form_for @playlistvideo do |f| %>
+      <br/>
+      <%= f.collection_select :playlist_id, Playlist.all, :id, :name%>
+      <%= f.collection_select :video_id, Video.all, :id, :title%>
+      <%= f.submit "Add", class: "commentbutton" %>
+  <% end %>
+</div>
