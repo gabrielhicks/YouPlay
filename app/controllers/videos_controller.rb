@@ -15,6 +15,7 @@ class VideosController < ApplicationController
   end
 
   def handle_search
+    @videos = Video.all
     @key = ENV['API_KEY']
     @input = (params[:input])
     @max = '30'
@@ -29,7 +30,6 @@ class VideosController < ApplicationController
       end
       i+=1
     end
-    redirect_to videos_path
+    # redirect_to videos_path
   end
-
 end
