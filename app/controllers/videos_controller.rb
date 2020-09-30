@@ -4,14 +4,12 @@ class VideosController < ApplicationController
     @videos = Video.all
   end
 
-
   def show
     @videos = Video.all
     @video = Video.find(params[:id])
   end
 
   def search
-
   end
 
   def handle_search
