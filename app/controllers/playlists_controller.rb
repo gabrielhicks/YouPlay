@@ -16,12 +16,13 @@ class PlaylistsController < ApplicationController
 
 
   def create
-    playlist = @current_user.playlists.create(playlist_params)
+    @playlist = @current_user.playlists.create(playlist_params)
 
-    if playlist.valid?
+    if @playlist.valid?
+      flash[:new_playlist_added] = "New Playlist Created!"
       redirect_to playlists_path
     else
-      flash[:errors] = playlist.errors.full_messages
+      flash[:new_playlist_errors] = @playlist.errors.full_messages
       redirect_to new_playlist_path
     end
   end

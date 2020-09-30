@@ -1,11 +1,20 @@
 class PlaylistVideosController < ApplicationController
-    before_action :find_playlist, only: [:edit, :update, :destroy]
+    before_action :find_playlist_video, only: [:edit, :update, :destroy]
 
     def new
-        @playlist_video = PlaylistVideo.new
+        @playlistvideo = PlaylistVideo.new
     end
 
     def create
+      @playlistvideo = PlaylistVideo.create(playlistvideo_params)
+
+      if @playlistvideo.valid?
+        flash[:new_playlistvideo_errors] = "New Playlist Created!"
+        redirect_to playlists_path
+      else
+        flash[:new_playlistvideo_errors] = @playlistvideo.errors.full_messages
+        redirect_to new_playlist_video_path
+      end
     end
 
     def edit
@@ -22,8 +31,8 @@ class PlaylistVideosController < ApplicationController
 
     private
 
-    def playlist_params
-        params.require(:playlist_video).permit(:playlist_id, :video_id)
+    def playlistvideo_params
+        params.require(:playlist_video).permit!
     end
 
     def find_playlist_video
