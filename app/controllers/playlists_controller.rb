@@ -1,3 +1,4 @@
+
 class PlaylistsController < ApplicationController
   before_action :find_playlist, only: [:edit, :update, :destroy]
 
@@ -20,7 +21,7 @@ class PlaylistsController < ApplicationController
 
     if @playlist.valid?
       flash[:new_playlist_added] = "New Playlist Created!"
-      redirect_to playlists_path
+      redirect_to playlist_path(@playlist)
     else
       flash[:new_playlist_errors] = @playlist.errors.full_messages
       redirect_to new_playlist_path

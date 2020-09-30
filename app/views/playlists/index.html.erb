@@ -1,6 +1,13 @@
 <h3>Here is the playlist index</h3>
 <% @playlists.each do |playlist| %>
-  <%= button_to playlist.name, playlist_path(playlist), method: :get%><br>
+      <div class="card-index firstone">
+          <a href="/playlists/<%= playlist.id %>">
+            <div>
+              <img class = "thumbnail" src="<%= playlist.videos.first.thumbnail_url %>" width="100%" height="100%">
+              <p class="card-text"><%= playlist.name %></p>
+            </div>
+          </a>
+      </div>
 <% end %>
 
 <%= button_to "+ New Playlist", new_playlist_path, method: :get %>
