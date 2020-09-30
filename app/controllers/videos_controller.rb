@@ -34,6 +34,6 @@ class VideosController < ApplicationController
   end
 
   def all
-    @videos = Video.all.sample(150)
+    @videos = Video.all.select {|video| video.video_id}.uniq
   end
 end

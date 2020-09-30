@@ -3,7 +3,7 @@ class Video < ApplicationRecord
     has_many :playlists, through: :playlist_videos
     has_many :comments
     validates :category, presence: true
-    validates :video_id, uniqueness: true
+    validates :video_id, presence: true
 
     def category_videos
         video_array = []
