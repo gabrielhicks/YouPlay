@@ -358,6 +358,7 @@ body:after {
   margin-left: 15vw;
   padding-top: 30vh;
   margin-right: 10vw;
+  font-size: 1.2em;
 }
 
 .pill {
@@ -365,7 +366,7 @@ body:after {
   position: relative;
 }
 
-.pills a:nth-of-type(1) {
+/* .pills a:nth-of-type(1) {
   background: rgb(46, 163, 247);
   color: white;
 }
@@ -420,7 +421,7 @@ body:after {
   font-size: 1.3em;
   background: rgba(122, 218, 70, 1);
   color: white;
-}
+} */
 
 
 .animated {
