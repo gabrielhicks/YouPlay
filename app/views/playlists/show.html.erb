@@ -17,6 +17,6 @@
   <% end %>
   </div>
   <div class="stickyrighttop"><%= button_to "+ New Video", new_playlist_video_path, class:"searchbutton", method: :get %></div>
-  <% if @current_user %>
+  <% if @current_user == @playlist.user %>
     <div class="stickybottom"><%= button_to "Clear #{@playlist.name.upcase}", playlist_path(@playlist), class:"searchbutton redbutton", method: :delete %></div>
   <% end %>
