@@ -14,6 +14,15 @@
  *= require_self
  */
 
+​ video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10000;
+}
 
 /*playing with comments*/
 .default {
@@ -66,6 +75,7 @@ aside {
 .comment-button {
   position: absolute;
   right: 3vw;
+  background-color: rgb(48, 172, 251);
 }
 
 .seecomment {
@@ -118,13 +128,13 @@ html {
 /* Add an active class to highlight the current page */
 .topnav a.active {
   float: left;
-  background-color: rgb(46, 163, 247);
+  background-color: rgb(48, 172, 251);
   color: white;
 }
 
 .topnav a.active2 {
   float: right;
-  background-color: rgb(46, 163, 247);
+  background-color:rgb(48, 172, 251);
   color: white;
 }
 
@@ -207,7 +217,8 @@ html {
 
 .formbox {
   margin-top: 20vh;
-  background: transparent;
+  background: white;
+  opacity: 0.9;
   padding: 30px;
   padding-right: 40px;
   padding-bottom: 40px;
@@ -239,10 +250,13 @@ html {
 
 
 .login-button {
+  background-color:rgb(48, 172, 251);
+  opacity: 0.8;
   width: 100%;
   margin-top: 15px;
   border-radius: 20px;
   border: none;
+  color: white;
   margin-left: 5px;
   font-size: 15pt;
   font-weight: 700;
@@ -251,10 +265,8 @@ html {
 }
 
 .login-button:hover {
-  transform: scale(1.03);
-  background-color: rgb(46, 204, 238);
-  letter-spacing: 4px;
-  color: white;
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 .modal {
@@ -329,19 +341,22 @@ body:after {
 
 .inputbox {
   border-radius: 20px;
+  background:white;
   padding: 3px;
-  padding-left: 10px;
+  padding-left: 14px;
   letter-spacing: 2px;
   font-weight: 600;
   margin-right: 10px;
-  border: 0.5px solid lightgrey;
+  border: 0.5px solid grey;
   transition: 1s;
   outline:none;
+  opacity: 0.8;
 }
 
 .searchbutton {
   border-radius: 20px;
-  background: #0dcbff;
+  background: rgb(48, 172, 251);
+  opacity: 0.8;
   border: 0px;
   font-weight: 700;
   color: white;
@@ -356,6 +371,7 @@ body:after {
 .inputbox:hover,
 .searchbutton:hover {
   transform: scale(1.1);
+  opacity: 1;
 }
 
 .stickyrighttop {
@@ -596,7 +612,7 @@ img {
   width: 100%;
   z-index: 10000000000000;
   position: absolute;
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .toppanel {
@@ -611,7 +627,7 @@ img {
   width: 100vw;
   height: 50vh;
   margin-top: 50vh;
-  background: red;
+  background: rgb(48, 172, 251);
 }
 
 
@@ -620,6 +636,7 @@ img {
   animation-delay: 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  opacity: 0.8;
 }
 
 @keyframes transitionUp {
@@ -695,7 +712,7 @@ img {
   }
 
   99% {
-    opacity: 0;
+    opacity: 1;
     transform: scale(100) rotate(360deg);
   }
 
