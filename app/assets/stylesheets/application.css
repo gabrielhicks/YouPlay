@@ -595,6 +595,7 @@ img {
   animation: transitionLeft 800ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  opacity: 0.9;
 }
 
 @keyframes transitionLeft {
@@ -626,6 +627,7 @@ img {
 }
 
 .botpanel {
+  opacity: 0.9;
   position: fixed;
   width: 100vw;
   height: 50vh;
@@ -634,6 +636,7 @@ img {
 }
 
 .slideToLeftHand {
+  opacity: 0.9;
   animation: transitionUp 3000ms;
   animation-delay: 2s;
   animation-iteration-count: 1;
@@ -642,11 +645,11 @@ img {
 
 @keyframes transitionUp {
   from {
-    opacity: 1;
+    opacity: 0.9;
   }
 
   30% {
-    opacity: 1;
+    opacity: 0.9;
     width: 0vw;
   }
 
@@ -665,11 +668,11 @@ img {
 
 @keyframes transitionDown {
   from {
-    opacity: 1;
+    opacity: 0.9;
   }
 
   30% {
-    opacity: 1;
+    opacity: 0.9;
     width: 0vw;
   }
 
