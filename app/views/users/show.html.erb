@@ -10,9 +10,9 @@
   <h5>Full Name: <%= @user.name.upcase %></h5>
   <br>
   <h5>Stats:</h5>
-  <p>Comments: <b><%= @user.comments.count %></b></p>
-  <p>Videos Viewed: <%= @user.views.count %></p>
-  <p>Videos Liked: <% %></p>
+  <h7>Comments: <b><%= @user.comments.count %></b></h7><br>
+  <h7>Videos Viewed: <b><%= @user.views.count %></b></h7><br>
+  <h7>Videos Liked: <% %></h7><br><br>
 
 
   <h4>Playlists</h4>
@@ -21,7 +21,7 @@
         <a href="/playlists/<%= playlist.id %>">
           <div>
             <% if playlist.videos.count == 0 %>
-              <img class = "thumbnail" src="/images/buttonclip.png" width="180px;" height="50%">
+              <img class = "thumbnail" src="/images/buttonclip.png" width="56%;" height="100%">
             <% else %>
               <img class = "thumbnail" src="<%= playlist.videos.first.thumbnail_url %>" width="100%" height="100%">
             <% end %>
