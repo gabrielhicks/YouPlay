@@ -3,12 +3,7 @@ frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media
 gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <% render 'views/view_video' %>
-<%# <% if logged_in? %>
-  <%# <% render 'likes/like_video'%><%# Likes <% @video.likes.count %>
-<%# <% else %>
-  <%# Likes: <%= @video.likes.count %>
-<%# <% end %>
-<%# <a href="/videos">Home Page</a><br/> %>
+
   <% if @video == Video.first %>
     <a class="next" href="/videos/<%= @video.id+1 %>"><h2>></h2></a>
   <% elsif @video == Video.last %>
@@ -16,7 +11,7 @@ gyroscope; picture-in-picture" allowfullscreen></iframe>
   <% else %>
     <a class="previous" href="/videos/<%= @video.id-1 %>"><h2><</h2></a><br/>
     <a class="next" href="/videos/<%= @video.id+1 %>"><h2>></h2></a>
-<% end %>
+  <% end %>
 
 <div class="group">
   <h4 style="font-size:16pt;"><%= @video.title %></h4>

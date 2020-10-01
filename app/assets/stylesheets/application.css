@@ -722,6 +722,7 @@ img {
 
   30% {
     opacity: 0.9;
+    transform: translateX(100vw);
     width: 0vw;
   }
 
