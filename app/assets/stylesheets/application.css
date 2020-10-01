@@ -775,6 +775,7 @@ img {
 
   30% {
     opacity: 1;
+    transform: translateX(100vw);
     width: 0vw;
   }
 
