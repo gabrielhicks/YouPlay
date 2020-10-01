@@ -14,21 +14,25 @@
  *= require_self
  */
 
-​ video {
+video{
   object-fit: cover;
   width: 100vw;
   height: 100vh;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: -10000;
 }
+
+
+
 
 /*playing with comments*/
 .default {
   background: none;
   color: #666;
 }
+
 
 .group:after {
   clear: both;
@@ -72,29 +76,28 @@ aside {
   min-height: 40px;
 }
 
-.comment-button {
+.comment-button{
   position: absolute;
-  right: 3vw;
-  background-color: rgb(48, 172, 251);
+  right:3vw;
 }
 
 .seecomment {
-  letter-spacing: 1px;
-  padding: 3px;
-  text-indent: 1vh;
-  position: right;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  border-radius: 20px;
-  background: transparent;
-}
+    letter-spacing: 1px;
+    padding: 3px;
+    text-indent: 1vh;
+    position: right;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    background: transparent;
+  }
 
 .commentbutton {
   border-radius: 20px;
   border: 0px;
   font-weight: 400;
-}
+    }
 
 /*nav bar*/
 
@@ -128,13 +131,13 @@ html {
 /* Add an active class to highlight the current page */
 .topnav a.active {
   float: left;
-  background-color: rgb(48, 172, 251);
+  background-color: rgb(46, 163, 247);
   color: white;
 }
 
 .topnav a.active2 {
   float: right;
-  background-color:rgb(48, 172, 251);
+  background-color: rgb(46, 163, 247);
   color: white;
 }
 
@@ -146,14 +149,19 @@ html {
 .row {
   margin: auto;
   width: 90%;
-
 }
 
-.viewall-button a {
+.viewall-button{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.viewall-button a{
   color: white;
 }
 
-.viewall-button a:hover {
+.viewall-button a:hover{
   text-decoration: none;
 }
 
@@ -201,6 +209,9 @@ html {
   margin: auto;
   width: 100%;
 }
+
+
+
 
 .logintext {
   letter-spacing: 3px;
@@ -250,13 +261,10 @@ html {
 
 
 .login-button {
-  background-color:rgb(48, 172, 251);
-  opacity: 0.8;
   width: 100%;
   margin-top: 15px;
   border-radius: 20px;
   border: none;
-  color: white;
   margin-left: 5px;
   font-size: 15pt;
   font-weight: 700;
@@ -265,8 +273,10 @@ html {
 }
 
 .login-button:hover {
-  transform: scale(1.1);
-  opacity: 1;
+  transform: scale(1.03);
+  background-color: rgb(46, 204, 238);
+  letter-spacing: 4px;
+  color: white;
 }
 
 .modal {
@@ -341,13 +351,13 @@ body:after {
 
 .inputbox {
   border-radius: 20px;
-  background:white;
+  background: white;
   padding: 3px;
   padding-left: 14px;
   letter-spacing: 2px;
   font-weight: 600;
   margin-right: 10px;
-  border: 0.5px solid grey;
+  border: 1px solid grey;
   transition: 1s;
   outline:none;
   opacity: 0.8;
@@ -355,7 +365,7 @@ body:after {
 
 .searchbutton {
   border-radius: 20px;
-  background: rgb(48, 172, 251);
+  background: #0dcbff;
   opacity: 0.8;
   border: 0px;
   font-weight: 700;
@@ -374,7 +384,7 @@ body:after {
   opacity: 1;
 }
 
-.stickyrighttop {
+.stickyrighttop{
   position: fixed;
   right: 5vw;
   top: 65px;
@@ -388,33 +398,19 @@ body:after {
   font-size: 1.2em;
 }
 
+
+
+
+
+
 h4 {
   font-size: 24pt;
   font-weight: 900;
   letter-spacing: 4px;
   display: flex;
   align-items: center;
-  color: rgb(48, 172, 251);
+  color:rgb(48, 172, 251);
   transition: 1s;
-}
-
-h5 {
-  font-size: 18pt;
-  font-weight: 900;
-  letter-spacing: 4px;
-  display: flex;
-  align-items: center;
-  color: rgb(48, 172, 251);
-  transition: 1s;
-}
-
-h5::after {
-  content: '';
-  flex: 1;
-  margin-left: 1.2rem;
-  height: 1px;
-  color: lightgrey;
-  background-color: rgba(0, 0, 0, .1);
 }
 
 h4::after {
@@ -423,13 +419,76 @@ h4::after {
   margin-left: 1.2rem;
   height: 1px;
   color: lightgrey;
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0,0,0,.1);
 }
+
+
+
+
+
 
 .pill {
   margin: 5px;
   position: relative;
 }
+
+/* .pills a:nth-of-type(1) {
+  background: rgb(46, 163, 247);
+  color: white;
+}
+
+.pills a:nth-of-type(2) {
+  background: rgb(81, 241, 55);
+  color: white;
+}
+
+.pills a:nth-of-type(3) {
+  background: rgb(250, 255, 25);
+  color: black;
+}
+
+.pills a:nth-of-type(4) {
+  background: rgb(255, 46, 25);
+  color: white;
+}
+
+.pills a:nth-of-type(5) {
+  background: rgb(25, 255, 221);
+  color: white;
+}
+
+.pills a:nth-of-type(6) {
+  background: rgb(168, 25, 255);
+  color: white;
+}
+
+.pills a:nth-of-type(7) {
+  background: rgb(255, 25, 143);
+  color: white;
+}
+
+.pills a:nth-of-type(8) {
+  background: rgb(25, 255, 241);
+  color: white;
+}
+
+.pills a:nth-of-type(9) {
+  background: rgb(255, 198, 25);
+  color: white;
+}
+
+.pills a:nth-of-type(10) {
+  background: rgb(255, 115, 25);
+  color: white;
+}
+
+.pills a {
+  transition: 1s;
+  font-size: 1.3em;
+  background: rgba(122, 218, 70, 1);
+  color: white;
+} */
+
 
 .animated {
   animation: myAnimated 4s ease-in-out;
@@ -473,11 +532,11 @@ h4::after {
 }
 
  .card-show {
-   width: 100%; 
+   width: 100%;
    margin: 0.5%;
-  border-radius: 20px; 
-   transition: 1s; 
-   justify-content: center; 
+  border-radius: 20px;
+   transition: 1s;
+   justify-content: center;
 }
 
 .card-text {
@@ -555,6 +614,7 @@ img {
   }
 }
 
+
 @media only screen and (max-width: 1000px) {
   .card-index {
     width: 48%;
@@ -612,7 +672,7 @@ img {
   width: 100%;
   z-index: 10000000000000;
   position: absolute;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .toppanel {
@@ -627,7 +687,7 @@ img {
   width: 100vw;
   height: 50vh;
   margin-top: 50vh;
-  background: rgb(48, 172, 251);
+  background: red;
 }
 
 
@@ -636,7 +696,6 @@ img {
   animation-delay: 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  opacity: 0.8;
 }
 
 @keyframes transitionUp {
@@ -678,11 +737,14 @@ img {
   }
 }
 
+
+
 .makeitcenter {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 
 .explodetoright {
   position: fixed;
@@ -712,7 +774,7 @@ img {
   }
 
   99% {
-    opacity: 1;
+    opacity: 0;
     transform: scale(100) rotate(360deg);
   }
 
