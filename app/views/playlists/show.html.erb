@@ -1,5 +1,7 @@
 <div class="indexpage">
-  <div class="stickyrighttop"><%= button_to "+ New Video", new_playlist_video_path, class:"searchbutton", method: :get %></div>
+  <% if @current_user == @playlist.user %>
+    <div class="stickyrighttop"><%= button_to "+ New Video", new_playlist_video_path, class:"searchbutton", method: :get %></div>
+  <% end %>
   <br/><br/>
   <h4>Playlist: <%= @playlist.name.upcase %></h4>
   <% if @playlist.videos.count == 0 %>
