@@ -11,11 +11,11 @@
   <br>
   <h5>Stats:</h5>
   <p>Comments: <b><%= @user.comments.count %></b></p>
-  <p>Videos Watched: <%%></p>
-  <p>Videos Liked: <%%></p>
+  <p>Videos Watched: <% %></p>
+  <p>Videos Liked: <% %></p>
 
 
-  <h4>Playlist</h4>
+  <h4>Playlists</h4>
   <% @user.playlists.each do |playlist| %>
     <div class="card-index firstone">
         <a href="/playlists/<%= playlist.id %>">
