@@ -130,8 +130,22 @@ html {
 .row {
   margin: auto;
   width: 90%;
-
 }
+
+.viewall-button{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.viewall-button a{
+  color: white;
+}
+
+.viewall-button a:hover{
+  text-decoration: none;
+}
+
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
@@ -315,13 +329,6 @@ body:after {
   z-index: 1000000;
 }
 
-.sticky-navbar {
-  position: -webkit-sticky;
-  position: sticky;
-  top: -2px;
-  z-index: 100;
-}
-
 .inputbox {
   border-radius: 20px;
   padding: 3px;
@@ -353,6 +360,12 @@ body:after {
   transform: scale(1.1);
 }
 
+.stickyrighttop{
+  position: fixed;
+  right: 5vw;
+  top: 65px;
+}
+
 /* pills */
 .pills {
   margin-left: 15vw;
@@ -360,6 +373,35 @@ body:after {
   margin-right: 10vw;
   font-size: 1.2em;
 }
+
+
+
+
+
+
+h4 {
+  font-size: 24pt;
+  font-weight: 900;
+  letter-spacing: 4px;
+  display: flex;
+  align-items: center;
+  color:rgb(48, 172, 251);
+  transition: 1s;
+}
+
+h4::after {
+  content: '';
+  flex: 1;
+  margin-left: 1.2rem;
+  height: 1px;
+  color: lightgrey;
+  background-color: rgba(0,0,0,.1);
+}
+
+
+
+
+
 
 .pill {
   margin: 5px;
@@ -466,11 +508,11 @@ body:after {
 }
 
  .card-show {
-   width: 100%; 
+   width: 100%;
    margin: 0.5%;
-  border-radius: 20px; 
-   transition: 1s; 
-   justify-content: center; 
+  border-radius: 20px;
+   transition: 1s;
+   justify-content: center;
 }
 
 .card-text {

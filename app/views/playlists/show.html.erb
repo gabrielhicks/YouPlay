@@ -1,15 +1,15 @@
-<br/>
-<h3><%= @playlist.name %></h3>
-<hr/>
-<% @playlist.videos.each do |video| %>
-      <div class="card-index firstone">
-          <a href="/videos/<%= video.id %>">
-            <div>
-              <img class = "thumbnail" src="<%= video.thumbnail_url %>" width="100%" height="100%">
-              <p class="card-text"><%= video.title %></p>
-            </div>
-          </a>
-      </div>
-<% end %>
-
-<%= button_to "add_video", new_playlist_video_path, method: :get %>
+<br/><br/>
+<div class="indexpage">
+  <h4>Playlist: <%= @playlist.name.upcase %></h4>
+  <% @playlist.videos.each do |video| %>
+        <div class="card-index firstone">
+            <a href="/videos/<%= video.id %>">
+              <div>
+                <img class = "thumbnail" src="<%= video.thumbnail_url %>" width="100%" height="100%">
+                <p class="card-text"><%= video.title %></p>
+              </div>
+            </a>
+        </div>
+  <% end %>
+  <div class="stickyrighttop"><%= button_to "add_video", new_playlist_video_path, class:"searchbutton", method: :get %></div>
+</div>

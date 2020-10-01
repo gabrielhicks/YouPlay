@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   post "/login", to: "users#handle_login"
   delete "/logout", to: "users#logout"
   get "/all", to: "videos#all", as: "all_videos"
+
+  root 'videos#index'
 end
