@@ -1,7 +1,5 @@
   <form class="seecomment">
-  <hr>
-    <h5><%=link_to comment.user.name, user_path(comment.user) %></h5>
-    <p style="font-size:x-small"><%= comment.updated_at.strftime('%B %d, %Y at %H:%M %Z') %></p>
-    <br>
-    <%= comment.content %>
+    <h4 style="color:black; font-size:14pt;"><%=link_to comment.user.name.upcase, user_path(comment.user) %></h4>
+    <p style="font-size:x-small;"><%= comment.updated_at.strftime('%B %d, %Y at %H:%M %Z') %></p>
+    <div style="margin-left:10px; margin-top:-10px;">:  <%= comment.content %></div>
   </form>

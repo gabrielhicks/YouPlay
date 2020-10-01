@@ -1,17 +1,29 @@
-<% if flash[:success] %>
-  <p style="color:green;"><%= flash[:success] %></p>
-<% end %>
+<div class="indexpage">
+  <% if @user == @current_user %>
+    <div class="stickyrighttop"><%=button_to "Edit Profile", edit_user_path(@user), class:"searchbutton",method: :get%></div>
+  <% end %>
+  <br/><br/>
+  <% if flash[:success] %>
+    <p style="color:green;"><%= flash[:success] %></p>
+  <% end %>
+  <h4>Account Info:</h4>
+  <h5>Full Name: <%= @user.name.upcase %></h5>
+  <br>
+  <h5>Stats:</h5>
+  <p>Comments: <b><%= @user.comments.count %></b></p>
+  <p>Videos Watched: <%%></p>
+  <p>Videos Liked: <%%></p>
 
-<h1><%= @user.username %></h1>
-<br>
-<h3>Full Name: <%= @user.name %></h3>
-<br>
-<h5>Stats:</h5>
-<p>Comments: <%= @user.comments.count %></p>
-<p>Videos Watched: <%%></p>
-<p>Videos Liked: <%%></p>
-<br>
-<hr>
-<% if @user == @current_user %>
-  <%=link_to "Edit Profile", edit_user_path(@user)%>
-<% end %>
+
+  <h4>Playlist</h4>
+  <% @user.playlists.each do |playlist| %>
+    <div class="card-index firstone">
+        <a href="/playlists/<%= playlist.id %>">
+          <div>
+            <img class = "thumbnail" src="<%= playlist.videos.first.thumbnail_url %>" width="100%" height="100%">
+            <p class="card-text"><%= playlist.name %></p>
+          </div>
+        </a>
+    </div>
+  <% end %>
+</div>

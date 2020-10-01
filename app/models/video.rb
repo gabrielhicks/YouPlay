@@ -7,7 +7,7 @@ class Video < ApplicationRecord
 
     def category_videos
         video_array = []
-        videos = Video.all.each do |video| 
+        videos = Video.all.each do |video|
             if video.category == self.category
                 video_array << video
             end

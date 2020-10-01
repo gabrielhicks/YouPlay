@@ -21,7 +21,6 @@
   color: #666;
 }
 
-
 .group:after {
   clear: both;
 }
@@ -36,49 +35,56 @@
 .group,
 section,
 aside {
-  margin: 0 1.5% 24px 1.5%;
+  margin: 1%;
 }
 
 section {
   float: left;
-  width: 35%;
+  width: 98%;
 }
 
 aside {
   float: right;
-  width: 55%;
+  width: 98%;
 }
-  .comment {
-    letter-spacing: 2px;
-    padding: 3px;
-    text-indent: 1vh;
-    position: right;
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    border-radius: 20px;
-    background: transparent;
-    outline: none;
-    resize: none;
-    }
 
-  .seecomment {
-    letter-spacing: 1px;
-    padding: 3px;
-    text-indent: 1vh;
-    position: right;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    border-radius: 20px;
-    background: transparent;
-  }
+.comment {
+  letter-spacing: 2px;
+  padding: 3px;
+  padding-top: 5px;
+  text-indent: 1vh;
+  position: right;
+  width: 100%;
+  height: 50px;
+  border-radius: 15px;
+  background: transparent;
+  outline: none;
+  max-height: 200px;
+  min-height: 40px;
+}
 
-    .commentbutton {
+.comment-button {
+  position: absolute;
+  right: 3vw;
+}
+
+.seecomment {
+  letter-spacing: 1px;
+  padding: 3px;
+  text-indent: 1vh;
+  position: right;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  background: transparent;
+}
+
+.commentbutton {
   border-radius: 20px;
   border: 0px;
   font-weight: 400;
-    }
+}
 
 /*nav bar*/
 
@@ -133,6 +139,15 @@ html {
 
 }
 
+.viewall-button a {
+  color: white;
+}
+
+.viewall-button a:hover {
+  text-decoration: none;
+}
+
+
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
@@ -176,9 +191,6 @@ html {
   margin: auto;
   width: 100%;
 }
-
-
-
 
 .logintext {
   letter-spacing: 3px;
@@ -315,13 +327,6 @@ body:after {
   z-index: 1000000;
 }
 
-.sticky-navbar {
-  position: -webkit-sticky;
-  position: sticky;
-  top: -2px;
-  z-index: 100;
-}
-
 .inputbox {
   border-radius: 20px;
   padding: 3px;
@@ -353,6 +358,12 @@ body:after {
   transform: scale(1.1);
 }
 
+.stickyrighttop {
+  position: fixed;
+  right: 5vw;
+  top: 65px;
+}
+
 /* pills */
 .pills {
   margin-left: 15vw;
@@ -361,68 +372,29 @@ body:after {
   font-size: 1.2em;
 }
 
+h4 {
+  font-size: 24pt;
+  font-weight: 900;
+  letter-spacing: 4px;
+  display: flex;
+  align-items: center;
+  color: rgb(48, 172, 251);
+  transition: 1s;
+}
+
+h4::after {
+  content: '';
+  flex: 1;
+  margin-left: 1.2rem;
+  height: 1px;
+  color: lightgrey;
+  background-color: rgba(0, 0, 0, .1);
+}
+
 .pill {
   margin: 5px;
   position: relative;
 }
-
-/* .pills a:nth-of-type(1) {
-  background: rgb(46, 163, 247);
-  color: white;
-}
-
-.pills a:nth-of-type(2) {
-  background: rgb(81, 241, 55);
-  color: white;
-}
-
-.pills a:nth-of-type(3) {
-  background: rgb(250, 255, 25);
-  color: black;
-}
-
-.pills a:nth-of-type(4) {
-  background: rgb(255, 46, 25);
-  color: white;
-}
-
-.pills a:nth-of-type(5) {
-  background: rgb(25, 255, 221);
-  color: white;
-}
-
-.pills a:nth-of-type(6) {
-  background: rgb(168, 25, 255);
-  color: white;
-}
-
-.pills a:nth-of-type(7) {
-  background: rgb(255, 25, 143);
-  color: white;
-}
-
-.pills a:nth-of-type(8) {
-  background: rgb(25, 255, 241);
-  color: white;
-}
-
-.pills a:nth-of-type(9) {
-  background: rgb(255, 198, 25);
-  color: white;
-}
-
-.pills a:nth-of-type(10) {
-  background: rgb(255, 115, 25);
-  color: white;
-}
-
-.pills a {
-  transition: 1s;
-  font-size: 1.3em;
-  background: rgba(122, 218, 70, 1);
-  color: white;
-} */
-
 
 .animated {
   animation: myAnimated 4s ease-in-out;
@@ -548,7 +520,6 @@ img {
   }
 }
 
-
 @media only screen and (max-width: 1000px) {
   .card-index {
     width: 48%;
@@ -671,14 +642,11 @@ img {
   }
 }
 
-
-
 .makeitcenter {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 
 .explodetoright {
   position: fixed;
