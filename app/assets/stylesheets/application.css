@@ -382,6 +382,25 @@ h4 {
   transition: 1s;
 }
 
+h5 {
+  font-size: 18pt;
+  font-weight: 900;
+  letter-spacing: 4px;
+  display: flex;
+  align-items: center;
+  color: rgb(48, 172, 251);
+  transition: 1s;
+}
+
+h5::after {
+  content: '';
+  flex: 1;
+  margin-left: 1.2rem;
+  height: 1px;
+  color: lightgrey;
+  background-color: rgba(0, 0, 0, .1);
+}
+
 h4::after {
   content: '';
   flex: 1;

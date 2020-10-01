@@ -2,7 +2,13 @@
 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
 gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h4><%= @video.title %></h4>
-
+<% render 'views/view_video' %>
+<h5>Views: <%= @video.views.count %></h5>
+<%# <% if logged_in? %>
+  <%# <% render 'likes/like_video'%><%# Likes <% @video.likes.count %>
+<%# <% else %>
+  <%# Likes: <%= @video.likes.count %>
+<%# <% end %>
 <%# <a href="/videos">Home Page</a><br/> %>
 <a class="previous" href="/videos/<%= @video.id-1 %>"><h2><</h2></a><br/>
 <a class="next" href="/videos/<%= @video.id+1 %>"><h2>></h2></a>

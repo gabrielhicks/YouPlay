@@ -4,6 +4,7 @@
       <% cate << video.category %>
       <% end %>
       <%cate.uniq.each do |c| %>
+      <% $c = c %>
       <a class="badge badge-pill pill animated">
         <%= form_tag("/search", method: 'post', remote: true) do %>
           <%= hidden_field_tag :input, c %>

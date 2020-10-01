@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   resources :videos do
     resources :comments
+    resources :likes
+    resources :views
   end
+  resources :likes
+  resources :views
   resources :users
   resources :playlists
   resources :comments

@@ -8,6 +8,11 @@ class VideosController < ApplicationController
   def show
     @videos = Video.all
     @video = Video.find(params[:id])
+    if @current_user
+      View.create(user: @current_user, video: @video)
+    else
+      View.create(user: User.first, video: @video)
+    end
   end
 
   def search
