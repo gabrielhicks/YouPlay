@@ -7,7 +7,7 @@ gyroscope; picture-in-picture" allowfullscreen></iframe>
 <a class="next" href="/videos/<%= @video.id+1 %>"><h2>></h2></a>
 
 <div class="group">
-  <h4 style="font-size:17pt;"><%= @video.title %></h4>
+  <h4 style="font-size:16pt;"><%= @video.title %></h4>
   <aside>
     <br>
     <h4 style="font-size:15pt;">Comments:</h4>
@@ -23,8 +23,10 @@ gyroscope; picture-in-picture" allowfullscreen></iframe>
 
   <section>
     <br/><br>
+    <div class="viewall-button"><a class="searchbutton" href="/all">See all videos</a></div>
+  <br>
     <h4>Videos</h4>
-  <% @videos.last(20).each do |video| %>
+  <% @videos.last(30).each do |video| %>
     <%# @videos.sample(20).each do |video| %>
     <div class="card-index">
     <%# <div class="card-index"> %>
@@ -36,6 +38,17 @@ gyroscope; picture-in-picture" allowfullscreen></iframe>
         </a>
     </div>
     <% end %>
+    <% @videos.sample(20).each do |video| %>
+      <div class="card-index">
+          <a href="/videos/<%= video.id %>">
+            <div>
+              <img class = "thumbnail" src="<%= video.thumbnail_url %>" width="100%" height="100%">
+              <p class="card-text"><%= video.title %></p>
+            </div>
+          </a>
+      </div>
+      <% end %>
+
   </section>
 
 </div>
