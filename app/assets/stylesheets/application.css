@@ -29,7 +29,6 @@ video{
 
 }
 
-
 /*playing with comments*/
 .default {
   background: none;
@@ -427,8 +426,8 @@ body:after {
 
 .stickyrighttop{
   position: fixed;
+  margin-top: 13px;
   right: 5vw;
-  top: 65px;
 }
 
 .stickybottom{
