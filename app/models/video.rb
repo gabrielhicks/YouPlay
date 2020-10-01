@@ -6,6 +6,7 @@ class Video < ApplicationRecord
     has_many :views
     validates :category, presence: true
     validates :video_id, presence: true
+    validates :video_id, uniqueness:true
 
     def category_videos
         video_array = []

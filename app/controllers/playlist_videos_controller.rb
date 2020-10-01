@@ -32,7 +32,7 @@ class PlaylistVideosController < ApplicationController
     private
 
     def playlistvideo_params
-        params.require(:playlist_video).permit!
+        params.require(:playlist_video).permit(:video_id, :playlist_id)
     end
 
     def find_playlist_video

@@ -7,4 +7,11 @@
       <%= f.collection_select :video_id, Video.all, :id, :title%>
       <%= f.submit "Add", class: "searchbutton" %>
   <% end %>
+  <ul>
+    <% if flash[:playlistvideo_errors] %>
+      <% flash[:playlistvideo_errors].each do |error| %>
+        <li style="color:red;"><%= error %></li>
+      <% end %>
+    <% end %>
+  </ul>
 </div>

@@ -35,6 +35,9 @@ class PlaylistsController < ApplicationController
   end
 
   def destroy
+    @playlist = @current_user.playlists.find_by(id: params[:id])
+    @playlist.playlist_videos.destroy_all
+    redirect_to playlist_path(@playlist)
   end
 
   def delete
