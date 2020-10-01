@@ -9,8 +9,14 @@ gyroscope; picture-in-picture" allowfullscreen></iframe>
   <%# Likes: <%= @video.likes.count %>
 <%# <% end %>
 <%# <a href="/videos">Home Page</a><br/> %>
-<a class="previous" href="/videos/<%= @video.id-1 %>"><h2><</h2></a><br/>
-<a class="next" href="/videos/<%= @video.id+1 %>"><h2>></h2></a>
+  <% if @video == Video.first %>
+    <a class="next" href="/videos/<%= @video.id+1 %>"><h2>></h2></a>
+  <% elsif @video == Video.last %>
+    <a class="previous" href="/videos/<%= @video.id-1 %>"><h2><</h2></a><br/>
+  <% else %>
+    <a class="previous" href="/videos/<%= @video.id-1 %>"><h2><</h2></a><br/>
+    <a class="next" href="/videos/<%= @video.id+1 %>"><h2>></h2></a>
+<% end %>
 
 <div class="group">
   <h4 style="font-size:16pt;"><%= @video.title %></h4>

@@ -41,11 +41,43 @@ video{
   clear: both;
 }
 
-.group {
+.group{
   background: none;
   border-radius: 6px;
   clear: both;
   *zoom: 1;
+}
+
+.footerplacement{
+  bottom:0px;
+}
+footer{
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+p{
+  opacity: 0.3;
+  transition: 1s;
+  color: rgb(48, 172, 251);
+}
+footer p a:hover{
+  text-decoration: none;
+}
+
+footer p:hover{
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+footer h6{
+  font-size: 10pt;
+  margin-bottom: -5px;
+  font-weight: bold;
+}
+footer .design{
+  opacity: 0.9;
 }
 
 .group,
