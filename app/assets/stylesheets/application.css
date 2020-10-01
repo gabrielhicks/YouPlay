@@ -24,7 +24,10 @@ video{
   z-index: -10000;
 }
 
+.views{
+  margin-left: 3vw;
 
+}
 
 
 /*playing with comments*/
@@ -378,6 +381,11 @@ body:after {
   outline: none;
 }
 
+.redbutton{
+  background: rgb(255, 0, 0);
+  opacity: 0.3;
+}
+
 .inputbox:hover,
 .searchbutton:hover {
   transform: scale(1.1);
@@ -388,6 +396,12 @@ body:after {
   position: fixed;
   right: 5vw;
   top: 65px;
+}
+
+.stickybottom{
+  position: fixed;
+  right: 5vw;
+  top: 92vh;
 }
 
 /* pills */

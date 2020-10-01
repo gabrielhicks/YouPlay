@@ -1,14 +1,22 @@
 <br/><br/>
 <div class="indexpage">
   <h4>Playlist: <%= @playlist.name.upcase %></h4>
-  <% @playlist.videos.each do |video| %>
-        <div class="card-index firstone">
-            <a href="/videos/<%= video.id %>">
-              <div>
-                <img class = "thumbnail" src="<%= video.thumbnail_url %>" width="100%" height="100%">
-                <p class="card-text"><%= video.title %></p>
-              </div>
-            </a>
-        </div>
+  <% if @playlist.videos.count == 0 %>
+    <h4 style="color:red; margin-left:20px;">Empty</h4>
+  <% else  %>
+    <% @playlist.videos.each do |video| %>
+          <div class="card-index firstone">
+              <a href="/videos/<%= video.id %>">
+                <div>
+                  <img class = "thumbnail" src="<%= video.thumbnail_url %>" width="100%" height="100%">
+                  <p class="card-text"><%= video.title %></p>
+                </div>
+              </a>
+          </div>
+    <% end %>
   <% end %>
+  </div>
   <div class="stickyrighttop"><%= button_to "+ New Video", new_playlist_video_path, class:"searchbutton", method: :get %></div>
+  <% if @current_user %>
+    <div class="stickybottom"><%= button_to "Clear #{@playlist.name.upcase}", playlist_path(@playlist), class:"searchbutton redbutton", method: :delete %></div>
+  <% end %>
