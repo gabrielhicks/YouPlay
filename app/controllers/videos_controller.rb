@@ -2,6 +2,7 @@ class VideosController < ApplicationController
   skip_before_action :authorized, only: [:index, :show, :search, :handle_search, :all]
   def index
     @videos = Video.all
+
   end
 
 
@@ -19,10 +20,12 @@ class VideosController < ApplicationController
 
   end
 
+
   def handle_search
     @videos = Video.all
     @key = ENV['API_KEY']
     @input = (params[:input])
+    @category = (params[:category])
     @max = '30'
     @playlist = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults='+@max+'&q='+@input+'&key='+@key)
     array = JSON.parse(@playlist)
