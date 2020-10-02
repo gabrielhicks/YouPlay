@@ -1,8 +1,8 @@
 <div class="indexpage">
-  <br/><br/>
   <% if @user == @current_user %>
-    <div class="stickyrighttop"><%=button_to "Edit Profile", edit_user_path(@user), class:"searchbutton",method: :get%></div>
+    <div class="stickyrighttop"><%=button_to "Edit Profile", edit_user_path, class:"searchbutton", method: :get%></div>
   <% end %>
+  <br/><br/>
   <% if flash[:success] %>
     <p style="color:green;"><%= flash[:success] %></p>
   <% end %>

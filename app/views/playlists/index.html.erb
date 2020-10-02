@@ -1,6 +1,6 @@
-<br><br>
 <div class="indexpage">
   <div class="stickyrighttop"><%= button_to "+ New Playlist", new_playlist_path, class:"searchbutton", method: :get %></div>
+  <br><br>
   <h4><%= @current_user.name %>'s Playlists</h4>
   <% @playlists.each do |playlist| %>
         <div class="card-index firstone">

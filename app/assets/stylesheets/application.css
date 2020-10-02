@@ -56,11 +56,13 @@ footer{
   font-weight: bold;
   text-align: center;
 }
-p{
+
+p {
   opacity: 0.3;
   transition: 1s;
   color: rgb(48, 172, 251);
 }
+
 footer p a:hover{
   text-decoration: none;
 }
@@ -113,7 +115,6 @@ aside {
 .comment-button {
   position: absolute;
   right: 3vw;
-  background-color: rgb(48, 172, 251);
 }
 
 .seecomment {
@@ -201,7 +202,6 @@ html {
   text-decoration: none;
 }
 
-
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
@@ -233,12 +233,10 @@ html {
   }
 }
 
-
 .indexpage {
   margin: auto;
   width: 90%;
 }
-
 
 .landing_page {
   height: 100vh;
@@ -282,7 +280,6 @@ html {
 
 }
 
-
 .login-box {
   border: 1px solid lightgrey;
   border-radius: 20px;
@@ -298,19 +295,13 @@ html {
   outline: none;
 }
 
-.login-box:hover {
-  transform: scale(1.03);
-
-}
-
 .login-button {
-  background-color: rgb(48, 172, 251);
-  opacity: 0.8;
   width: 100%;
+  background-color: rgb(48, 172, 251);
+  color: white;
   margin-top: 15px;
   border-radius: 20px;
   border: none;
-  color: white;
   margin-left: 5px;
   font-size: 15pt;
   font-weight: 700;
@@ -319,8 +310,7 @@ html {
 }
 
 .login-button:hover {
-  transform: scale(1.1);
-  opacity: 1;
+  transform: scale(1.03);
 }
 
 .modal {
@@ -495,6 +485,15 @@ h5::after {
 .pill {
   margin: 5px;
   position: relative;
+}
+
+.pillbutton {
+  font-size: 1.1em;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-top: -8px;
 }
 
 .animated {
