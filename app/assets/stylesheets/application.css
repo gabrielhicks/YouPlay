@@ -16,17 +16,18 @@
 
 video{
   object-fit: cover;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: -10000;
 }
 
+
+
 .views{
   margin-left: 3vw;
-
 }
 
 /*playing with comments*/
@@ -439,6 +440,7 @@ body:after {
 /* pills */
 .pills {
   margin-left: 15vw;
+  margin-top: -100vh;
   padding-top: 30vh;
   margin-right: 10vw;
   font-size: 1.2em;
