@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,6 +8,7 @@
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -20,7 +22,7 @@
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
       </a>
-      <a href="/" class="active">Home</a>
+      <a href="/videos" class="active">Home</a>
       <%= link_to "Log Out", logout_path, method: :delete %>
       <%= link_to "Playlists", playlists_path%>
       <%= link_to "Profile", user_path(session[:user])%>
@@ -28,33 +30,23 @@
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
       </a>
-      <a href="/" class="active hover">Home</a>
+      <a href="/videos" class="active hover">Home</a>
       <a href="/users" class="active2 hover">Sign Up</a>
       <%= link_to "Log In", login_path%>
     <% end %>
 </div>
     <%= yield %>
-
-      <section class="footerplacement">
-        <footer><h6 class="design">Designed & Created by<h6> <br>
-          <p>
-            <a href="https://www.linkedin.com/in/zhengjian-liu-33776553">ZHENGJIAN LIU</a>
-              <b style="color:black;">&</b>
-            <a href="https://www.linkedin.com/in/gabrieljhicks/" target="_blank">GABRIEL HICKS</a>
-          </p>
-        </footer>
-      </section>
-
   </body>
 
   <script>
     function myFunction() {
       var x = document.getElementById("myTopnav");
       if (x.className === "topnav") {
-        x.className += " responsive sticky-nav";
+        x.className += " responsive";
       } else {
         x.className = "topnav";
       }
     }
   </script>
+
 </html>
