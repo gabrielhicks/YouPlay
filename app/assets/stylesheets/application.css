@@ -412,13 +412,29 @@ body:after {
   outline: none;
 }
 
+.viewallbutton {
+  border-radius: 20px;
+  background: rgb(48, 172, 251);
+  opacity: 0.8;
+  border: 0px;
+  font-weight: 700;
+  color: white;
+  transition: 1s;
+  font-size: 1.2em;
+  padding: 3px;
+  padding-left: 13px;
+  padding-right: 13px;
+  outline: none;
+}
+
 .redbutton{
   background: rgb(255, 0, 0);
   opacity: 0.3;
 }
 
 .inputbox:hover,
-.searchbutton:hover {
+.searchbutton:hover,
+.viewallbutton:hover {
   transform: scale(1.1);
   opacity: 1;
 }
