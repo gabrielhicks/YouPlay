@@ -14,7 +14,7 @@
  *= require_self
  */
 
-video{
+video {
   object-fit: cover;
   width: 100%;
   height: 100vh;
@@ -24,9 +24,7 @@ video{
   z-index: -10000;
 }
 
-
-
-.views{
+.views {
   margin-left: 3vw;
 }
 
@@ -41,42 +39,46 @@ video{
   clear: both;
 }
 
-.group{
+.group {
   background: none;
   border-radius: 6px;
   clear: both;
   *zoom: 1;
 }
 
-.footerplacement{
-  bottom:0px;
+.footerplacement {
+  bottom: 0px;
 }
-footer{
+
+footer {
   margin-top: 20px;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
 }
-p{
+
+p {
   opacity: 0.3;
   transition: 1s;
   color: rgb(48, 172, 251);
 }
-footer p a:hover{
+
+footer p a:hover {
   text-decoration: none;
 }
 
-footer p:hover{
+footer p:hover {
   transform: scale(1.03);
   opacity: 1;
 }
 
-footer h6{
+footer h6 {
   font-size: 10pt;
   margin-bottom: -5px;
   font-weight: bold;
 }
-footer .design{
+
+footer .design {
   opacity: 0.9;
 }
 
@@ -111,28 +113,29 @@ aside {
   min-height: 40px;
 }
 
-.comment-button{
+.comment-button {
   position: absolute;
-  right:3vw;
+  right: 3vw;
+  background-color: rgb(48, 172, 251);
 }
 
 .seecomment {
-    letter-spacing: 1px;
-    padding: 3px;
-    text-indent: 1vh;
-    position: right;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    border-radius: 20px;
-    background: transparent;
-  }
+  letter-spacing: 1px;
+  padding: 3px;
+  text-indent: 1vh;
+  position: right;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  background: transparent;
+}
 
 .commentbutton {
   border-radius: 20px;
   border: 0px;
   font-weight: 400;
-    }
+}
 
 /*nav bar*/
 
@@ -167,13 +170,13 @@ html {
 /* Add an active class to highlight the current page */
 .topnav a.active {
   float: left;
-  background-color: rgb(46, 163, 247);
+  background-color: rgb(48, 172, 251);
   color: white;
 }
 
 .topnav a.active2 {
   float: right;
-  background-color: rgb(46, 163, 247);
+  background-color: rgb(48, 172, 251);
   color: white;
 }
 
@@ -187,17 +190,17 @@ html {
   width: 90%;
 }
 
-.viewall-button{
+.viewall-button {
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
-.viewall-button a{
+.viewall-button a {
   color: white;
 }
 
-.viewall-button a:hover{
+.viewall-button a:hover {
   text-decoration: none;
 }
 
@@ -246,9 +249,6 @@ html {
   width: 100%;
 }
 
-
-
-
 .logintext {
   letter-spacing: 3px;
   text-align: center;
@@ -263,11 +263,11 @@ html {
   align-items: center;
 }
 
-.bringitdown{
+.bringitdown {
   padding-top: 100vh;
 }
 
-.editform{
+.editform {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -306,12 +306,14 @@ html {
 
 }
 
-
 .login-button {
+  background-color: rgb(48, 172, 251);
+  opacity: 0.8;
   width: 100%;
   margin-top: 15px;
   border-radius: 20px;
   border: none;
+  color: white;
   margin-left: 5px;
   font-size: 15pt;
   font-weight: 700;
@@ -320,10 +322,8 @@ html {
 }
 
 .login-button:hover {
-  transform: scale(1.03);
-  background-color: rgb(46, 204, 238);
-  letter-spacing: 4px;
-  color: white;
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 .modal {
@@ -406,13 +406,13 @@ body:after {
   margin-right: 10px;
   border: 1px solid grey;
   transition: 1s;
-  outline:none;
+  outline: none;
   opacity: 0.8;
 }
 
 .searchbutton {
   border-radius: 20px;
-  background: #0dcbff;
+  background: rgb(48, 172, 251);
   opacity: 0.8;
   border: 0px;
   font-weight: 700;
@@ -425,7 +425,7 @@ body:after {
   outline: none;
 }
 
-.redbutton{
+.redbutton {
   background: rgb(255, 0, 0);
   opacity: 0.3;
 }
@@ -436,13 +436,13 @@ body:after {
   opacity: 1;
 }
 
-.stickyrighttop{
+.stickyrighttop {
   position: fixed;
   margin-top: 13px;
   right: 5vw;
 }
 
-.stickybottom{
+.stickybottom {
   position: fixed;
   right: 5vw;
   top: 92vh;
@@ -457,18 +457,13 @@ body:after {
   font-size: 1.2em;
 }
 
-
-
-
-
-
 h4 {
   font-size: 24pt;
   font-weight: 900;
   letter-spacing: 4px;
   display: flex;
   align-items: center;
-  color:rgb(48, 172, 251);
+  color: rgb(48, 172, 251);
   transition: 1s;
 }
 
@@ -478,66 +473,32 @@ h4::after {
   margin-left: 1.2rem;
   height: 1px;
   color: lightgrey;
-  background-color: rgba(0,0,0,.1);
+  background-color: rgba(0, 0, 0, .1);
 }
 
+h5 {
+  font-size: 18pt;
+  font-weight: 900;
+  letter-spacing: 4px;
+  display: flex;
+  align-items: center;
+  color: rgb(48, 172, 251);
+  transition: 1s;
+}
 
-
-
-
+h5::after {
+  content: '';
+  flex: 1;
+  margin-left: 1.2rem;
+  height: 1px;
+  color: lightgrey;
+  background-color: rgba(0, 0, 0, .1);
+}
 
 .pill {
   margin: 5px;
   position: relative;
 }
-
-/* .pills a:nth-of-type(1) {
-  background: rgb(46, 163, 247);
-  color: white;
-}
-.pills a:nth-of-type(2) {
-  background: rgb(81, 241, 55);
-  color: white;
-}
-.pills a:nth-of-type(3) {
-  background: rgb(250, 255, 25);
-  color: black;
-}
-.pills a:nth-of-type(4) {
-  background: rgb(255, 46, 25);
-  color: white;
-}
-.pills a:nth-of-type(5) {
-  background: rgb(25, 255, 221);
-  color: white;
-}
-.pills a:nth-of-type(6) {
-  background: rgb(168, 25, 255);
-  color: white;
-}
-.pills a:nth-of-type(7) {
-  background: rgb(255, 25, 143);
-  color: white;
-}
-.pills a:nth-of-type(8) {
-  background: rgb(25, 255, 241);
-  color: white;
-}
-.pills a:nth-of-type(9) {
-  background: rgb(255, 198, 25);
-  color: white;
-}
-.pills a:nth-of-type(10) {
-  background: rgb(255, 115, 25);
-  color: white;
-}
-.pills a {
-  transition: 1s;
-  font-size: 1.3em;
-  background: rgba(122, 218, 70, 1);
-  color: white;
-} */
-
 
 .animated {
   animation: myAnimated 4s ease-in-out;
@@ -562,8 +523,6 @@ h4::after {
   }
 }
 
-
-
 .card-index {
   width: 19%;
   margin: 0.5%;
@@ -580,12 +539,12 @@ h4::after {
     -5px -5px 30px 15px rgba(0, 0, 0, 0.09);
 }
 
- .card-show {
-   width: 100%;
-   margin: 0.5%;
+.card-show {
+  width: 100%;
+  margin: 0.5%;
   border-radius: 20px;
-   transition: 1s;
-   justify-content: center;
+  transition: 1s;
+  justify-content: center;
 }
 
 .card-text {
@@ -663,7 +622,6 @@ img {
   }
 }
 
-
 @media only screen and (max-width: 1000px) {
   .card-index {
     width: 48%;
@@ -692,8 +650,6 @@ img {
     font-size: 10pt;
   }
 }
-
-
 
 /* page transition*/
 
@@ -787,14 +743,11 @@ img {
   }
 }
 
-
-
 .makeitcenter {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 
 .explodetoright {
   position: fixed;
