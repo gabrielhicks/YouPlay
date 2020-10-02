@@ -700,11 +700,11 @@ img {
 
 @keyframes transitionUp {
   from {
-    opacity: 1;
+    opacity: 0.9;
   }
 
   30% {
-    opacity: 1;
+    opacity: 0.9;
     width: 0vw;
   }
 
@@ -723,11 +723,11 @@ img {
 
 @keyframes transitionDown {
   from {
-    opacity: 1;
+    opacity: 0.9;
   }
 
   30% {
-    opacity: 1;
+    opacity: 0.9;
     transform: translateX(100vw);
     width: 0vw;
   }

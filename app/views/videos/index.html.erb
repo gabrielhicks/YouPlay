@@ -19,7 +19,7 @@
 <div class="searchbar sticky">
   <%= form_tag("/search", method: 'post', remote: true) do %>
     <%= hidden_field_tag :category, "" %>
-    <%= text_field_tag :input, "", class: 'inputbox',placeholder:"Type here..."%>
+    <%= text_field_tag :input, "", class: 'inputbox',placeholder:"Music..."%>
     <%= submit_tag "Search", class:"searchbutton", id: "submit"%>
   <% end %>
 </div>
@@ -30,7 +30,7 @@
 <br>
 <div class="indexpage" id="indexpage">
 <% @videos.first(200).select do |video|  %>
-  <% if video.category%>
+  <% if video.category %>
   <div class="card-index">
       <a href="/videos/<%= video.id %>">
         <div>
