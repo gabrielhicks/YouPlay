@@ -467,7 +467,6 @@ h5 {
   font-size: 18pt;
   font-weight: 900;
   letter-spacing: 4px;
-  display: flex;
   align-items: center;
   color: rgb(48, 172, 251);
   transition: 1s;

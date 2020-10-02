@@ -4,17 +4,16 @@
   <% end %>
   <br/><br/>
   <% if flash[:success] %>
-    <p style="color:green;"><%= flash[:success] %></p>
+    <p style="color:green; font-size:medium; opacity:1;"><%= flash[:success] %></p>
   <% end %>
   <h4>Account Info:</h4>
-  <h5>Full Name: <%= @user.name.upcase %></h5>
+  <h5>Name: <%= @user.name %></h5>
   <br>
   <h4>Stats:</h4>
   <br>
+  <h3>Comments: <%= @user.comments.count %></h3>
   <br>
-  <h3><b>Comments: <%= @user.comments.count %></b></h3>
-  <br>
-  <h3><b>Videos Viewed: <%= @user.views.count %></b></h3>
+  <h3>Videos Viewed: <%= @user.views.count %></h3>
   <br>
   <%# <p>Videos Liked: <b></b></p> %>
 
