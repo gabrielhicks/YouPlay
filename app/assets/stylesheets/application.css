@@ -263,6 +263,10 @@ html {
   align-items: center;
 }
 
+.bringitdown{
+  padding-top: 100vh;
+}
+
 .editform{
   display: flex;
   justify-content: center;
