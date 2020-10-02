@@ -26,7 +26,7 @@ class VideosController < ApplicationController
     @key = ENV['API_KEY']
     @input = (params[:input]).downcase
     @category = (params[:category]).downcase
-    @max = '20'
+    @max = '50'
     @playlist = RestClient.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults='+@max+'&q='+@input+'&key='+@key)
     array = JSON.parse(@playlist)
 
