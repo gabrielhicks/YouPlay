@@ -754,7 +754,7 @@ img {
   animation: transitionexplode 3000ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  margin-top: 100vh;
+  margin-top: 50vh;
   width: 50px;
   z-index: 1000000000;
   border-radius: 0px;
