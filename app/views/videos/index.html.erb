@@ -1,4 +1,4 @@
-​<video playsinline autoplay muted loop>
+<video playsinline autoplay muted loop>
   <source src="/images/whitebg.mp4" type="video/mp4">
 </video>
 <div class="pills" id="pills">
@@ -7,8 +7,9 @@
     <% cate << video.category %>
     <% end %>
     <%cate.uniq.each do |c| %>
-    <a class="badge badge-pill pill animated">
+      <a class="badge badge-pill pill animated">
       <%= form_tag("/search", method: 'post', remote: true) do %>
+        <%= hidden_field_tag :category, c %>
         <%= hidden_field_tag :input, c %>
         <%= submit_tag c.upcase, class: "searchbutton" %>
       <% end %>
@@ -17,6 +18,7 @@
   </div>
 <div class="searchbar sticky">
   <%= form_tag("/search", method: 'post', remote: true) do %>
+    <%= hidden_field_tag :category, "" %>
     <%= text_field_tag :input, "", class: 'inputbox',placeholder:"Music..."%>
     <%= submit_tag "Search", class:"searchbutton", id: "submit"%>
   <% end %>
@@ -27,10 +29,32 @@
 <h4 style="margin-left:5vw; margin-right:5vw;">Videos</h4>
 <br>
 <div class="indexpage" id="indexpage">
-<% @videos.last(20).each do |video| %>
-  <%= render 'videos/video', video: video%>
+<% @videos.first(200).select do |video|  %>
+  <% if video.category%>
+  <div class="card-index">
+      <a href="/videos/<%= video.id %>">
+        <div>
+          <img class = "thumbnail" src="<%= video.thumbnail_url %>" width="100%" height="100%">
+          <p class="card-text"><%= video.title %></p>
+        </div>
+      </a>
+  </div>
+  <% end %>
 <% end %>
 </div>
+
+<section class="footerplacement">
+  <footer><h6 class="design">Designed & Created by<h6> <br>
+    <p>
+      <a href="https://www.linkedin.com/in/zhengjian-liu-33776553">ZHENGJIAN LIU</a>
+        <b style="color:black;">&</b>
+      <a href="https://www.linkedin.com/in/gabrieljhicks/" target="_blank">GABRIEL HICKS</a>
+    </p>
+  </footer>
+</section>
+
+
+
     <script>
         $(document).ready(function() {
             $(".searchbutton").click(function() {
