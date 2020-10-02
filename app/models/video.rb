@@ -8,14 +8,13 @@ class Video < ApplicationRecord
     validates :video_id, presence: true
     validates :video_id, uniqueness:true
 
-    def category_videos
-        video_array = []
-        videos = Video.all.each do |video|
-            if video.category == self.category
-                video_array << video
+    def self.videos_by_category(category)
+        category_videos = []
+        self.all.each do |video|
+            if video.category == category
+                category_videos << video
             end
         end
-        return video_array
     end
 
 end
