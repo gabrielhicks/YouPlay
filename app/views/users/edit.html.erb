@@ -6,6 +6,10 @@
         <br>
         <%= f.text_field :name, class:"login-box",placeholder:"Name"%>
         <br>
+        <%= f.password_field :password, class:"login-box",placeholder:"Password"%>
+        <br>
+        <%= f.password_field :password_confirmation, class:"login-box",placeholder:"Password Confirmation"%>
+        <br>
         <%= f.submit class:"login-button" %>
     <% end %>
     <hr>

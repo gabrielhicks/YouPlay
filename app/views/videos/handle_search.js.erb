@@ -1,2 +1,2 @@
-$('.indexpage').html("<%= j render @videos.filter{|video| video.category == @category || video.category == @input} %>");
+$('.indexpage').html("<%= j render @videos.filter{|video| video.category == @input || video.category == @category } %>");
 $('.inputbox').val('');
