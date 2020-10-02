@@ -309,6 +309,8 @@ html {
 
 .login-button {
   width: 100%;
+  background-color: rgb(48,172,251);
+  color: white;
   margin-top: 15px;
   border-radius: 20px;
   border: none;
@@ -321,9 +323,7 @@ html {
 
 .login-button:hover {
   transform: scale(1.03);
-  background-color: rgb(46, 204, 238);
   letter-spacing: 4px;
-  color: white;
 }
 
 .modal {
@@ -412,7 +412,7 @@ body:after {
 
 .searchbutton {
   border-radius: 20px;
-  background: #0dcbff;
+  background: rgb(48,172,251);
   opacity: 0.8;
   border: 0px;
   font-weight: 700;
@@ -490,63 +490,14 @@ h4::after {
   margin: 5px;
   position: relative;
 }
-
-/* .pills a:nth-of-type(1) {
-  background: rgb(46, 163, 247);
-  color: white;
+.pillbutton{
+  font-size: 1.1em;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  margin-left:-10px;
+  margin-right: -10px;
+  margin-top: -8px;
 }
-
-.pills a:nth-of-type(2) {
-  background: rgb(81, 241, 55);
-  color: white;
-}
-
-.pills a:nth-of-type(3) {
-  background: rgb(250, 255, 25);
-  color: black;
-}
-
-.pills a:nth-of-type(4) {
-  background: rgb(255, 46, 25);
-  color: white;
-}
-
-.pills a:nth-of-type(5) {
-  background: rgb(25, 255, 221);
-  color: white;
-}
-
-.pills a:nth-of-type(6) {
-  background: rgb(168, 25, 255);
-  color: white;
-}
-
-.pills a:nth-of-type(7) {
-  background: rgb(255, 25, 143);
-  color: white;
-}
-
-.pills a:nth-of-type(8) {
-  background: rgb(25, 255, 241);
-  color: white;
-}
-
-.pills a:nth-of-type(9) {
-  background: rgb(255, 198, 25);
-  color: white;
-}
-
-.pills a:nth-of-type(10) {
-  background: rgb(255, 115, 25);
-  color: white;
-}
-
-.pills a {
-  transition: 1s;
-  font-size: 1.3em;
-  background: rgba(122, 218, 70, 1);
-  color: white;
-} */
 
 
 .animated {
@@ -797,14 +748,11 @@ img {
   }
 }
 
-
-
 .makeitcenter {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 
 .explodetoright {
   position: fixed;
