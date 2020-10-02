@@ -257,6 +257,13 @@ html {
 }
 
 .loginform {
+  margin-top: -100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editform{
   display: flex;
   justify-content: center;
   align-items: center;
