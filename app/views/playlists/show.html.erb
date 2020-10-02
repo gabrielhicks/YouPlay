@@ -21,5 +21,5 @@
   </div>
 
   <% if @current_user == @playlist.user %>
-    <div class="stickybottom"><%= button_to "- Delete #{@playlist.name.upcase}", playlist_path(@playlist), class:"searchbutton redbutton", method: :delete %></div>
+    <div class="stickybottom"><%= button_to "Clear #{@playlist.name.upcase}", playlist_path(@playlist), class:"searchbutton redbutton", method: :delete %></div>
   <% end %>

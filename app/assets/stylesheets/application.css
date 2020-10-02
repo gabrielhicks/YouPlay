@@ -24,7 +24,9 @@ video {
   z-index: -10000;
 }
 
-.views {
+
+
+.views{
   margin-left: 3vw;
 }
 
@@ -39,46 +41,42 @@ video {
   clear: both;
 }
 
-.group {
+.group{
   background: none;
   border-radius: 6px;
   clear: both;
   *zoom: 1;
 }
 
-.footerplacement {
-  bottom: 0px;
+.footerplacement{
+  bottom:0px;
 }
-
-footer {
+footer{
   margin-top: 20px;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
 }
-
-p {
+p{
   opacity: 0.3;
   transition: 1s;
   color: rgb(48, 172, 251);
 }
-
-footer p a:hover {
+footer p a:hover{
   text-decoration: none;
 }
 
-footer p:hover {
+footer p:hover{
   transform: scale(1.03);
   opacity: 1;
 }
 
-footer h6 {
+footer h6{
   font-size: 10pt;
   margin-bottom: -5px;
   font-weight: bold;
 }
-
-footer .design {
+footer .design{
   opacity: 0.9;
 }
 
@@ -259,11 +257,11 @@ html {
   align-items: center;
 }
 
-.bringitdown {
+.bringitdown{
   padding-top: 100vh;
 }
 
-.editform {
+.editform{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -298,7 +296,7 @@ html {
 
 .login-button {
   width: 100%;
-  background-color: rgb(48, 172, 251);
+  background-color: rgb(48,172,251);
   color: white;
   margin-top: 15px;
   border-radius: 20px;
@@ -312,6 +310,7 @@ html {
 
 .login-button:hover {
   transform: scale(1.03);
+  letter-spacing: 4px;
 }
 
 .modal {
@@ -400,7 +399,7 @@ body:after {
 
 .searchbutton {
   border-radius: 20px;
-  background: rgb(48, 172, 251);
+  background: rgb(48,172,251);
   opacity: 0.8;
   border: 0px;
   font-weight: 700;
@@ -413,7 +412,7 @@ body:after {
   outline: none;
 }
 
-.redbutton {
+.redbutton{
   background: rgb(255, 0, 0);
   opacity: 0.3;
 }
@@ -431,6 +430,12 @@ body:after {
 }
 
 .stickybottom {
+  position: fixed;
+  margin-top: 13px;
+  right: 5vw;
+}
+
+.stickybottom{
   position: fixed;
   right: 5vw;
   top: 92vh;
@@ -468,12 +473,11 @@ h4::after {
   margin: 5px;
   position: relative;
 }
-
-.pillbutton {
+.pillbutton{
   font-size: 1.1em;
   padding-top: 5px;
   padding-bottom: 4px;
-  margin-left: -10px;
+  margin-left:-10px;
   margin-right: -10px;
   margin-top: -8px;
 }

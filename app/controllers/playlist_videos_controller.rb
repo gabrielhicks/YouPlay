@@ -9,10 +9,9 @@ class PlaylistVideosController < ApplicationController
       @playlistvideo = PlaylistVideo.create(playlistvideo_params)
 
       if @playlistvideo.valid?
-        flash[:new_playlistvideo_errors] = "New Playlist Created!"
         redirect_to playlist_path(@playlistvideo.playlist_id)
       else
-        flash[:new_playlistvideo_errors] = @playlistvideo.errors.full_messages
+        flash[:playlistvideo_errors] = @playlistvideo.errors.full_messages
         redirect_to new_playlist_video_path
       end
     end
@@ -32,10 +31,10 @@ class PlaylistVideosController < ApplicationController
     private
 
     def playlistvideo_params
-        params.require(:playlist_video).permit(:video_id, :playlist_id)
+      params.require(:playlist_video).permit!
     end
 
     def find_playlist_video
-        @playlist_video = Playlist.find_by(id: params[:id])
+      @playlist_video = Playlist.find_by(id: params[:id])
     end
 end
