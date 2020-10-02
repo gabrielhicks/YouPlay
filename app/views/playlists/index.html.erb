@@ -1,7 +1,7 @@
 <br><br>
 <div class="indexpage">
-  <h4>Playlist Index</h4>
   <div class="stickyrighttop"><%= button_to "+ New Playlist", new_playlist_path, class:"searchbutton", method: :get %></div>
+  <h4><%= @current_user.name %>'s Playlists</h4>
   <% @playlists.each do |playlist| %>
         <div class="card-index firstone">
             <a href="/playlists/<%= playlist.id %>">

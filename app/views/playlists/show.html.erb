@@ -1,5 +1,6 @@
 <br/><br/>
 <div class="indexpage">
+    <div class="stickyrighttop"><%= button_to "+ New Video", new_playlist_video_path, class:"searchbutton", method: :get %></div>
   <h4>Playlist: <%= @playlist.name.upcase %></h4>
   <% if @playlist.videos.count == 0 %>
     <h4 style="color:red; margin-left:20px;">Empty</h4>
@@ -16,7 +17,6 @@
     <% end %>
   <% end %>
   </div>
-  <div class="stickyrighttop"><%= button_to "+ New Video", new_playlist_video_path, class:"searchbutton", method: :get %></div>
   <% if @current_user == @playlist.user %>
     <div class="stickybottom"><%= button_to "Delete '#{@playlist.name.upcase}'", playlist_path(@playlist), class:"searchbutton redbutton", method: :delete %></div>
   <% end %>
