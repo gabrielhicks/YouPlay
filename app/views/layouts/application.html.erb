@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouPlay</title>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body class="slideToLeft">
+  <div class="topnav" id="myTopnav">
+    <% if logged_in? %>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+      </a>
+      <a href="/" class="active">Home</a>
+      <%= link_to "Log Out", logout_path, method: :delete %>
+      <%= link_to "Playlists", playlists_path%>
+      <%= link_to "Profile", user_path(session[:user])%>
+    <% else %>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+      </a>
+      <a href="/" class="active hover">Home</a>
+      <a href="/users" class="active2 hover">Sign Up</a>
+      <%= link_to "Log In", login_path%>
+    <% end %>
+</div>
+    <%= yield %>
+
+      <section class="footerplacement">
+        <footer><h6 class="design">Designed & Created by<h6> <br>
+          <p>
+            <a href="https://www.linkedin.com/in/zhengjian-liu-33776553">ZHENGJIAN LIU</a>
+              <b style="color:black;">&</b>
+            <a href="https://www.linkedin.com/in/gabrieljhicks/" target="_blank">GABRIEL HICKS</a>
+          </p>
+        </footer>
+      </section>
+
+  </body>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive sticky-nav";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+
+  <script>
+  $(document).ready(function(){
+    $('#input').change(function(){
+      $('form').submit();
+    });
+  });
+  </script>
+</html>

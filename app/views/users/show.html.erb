@@ -1,0 +1,39 @@
+<div class="indexpage">
+  <% if @user == @current_user %>
+    <div class="stickyrighttop"><%=button_to "Edit Profile", edit_user_path(@user), class:"searchbutton",method: :get%></div>
+  <% end %>
+  <br/><br/>
+  <% if flash[:success] %>
+    <p style="color:green;"><%= flash[:success] %></p>
+  <% end %>
+  <h4>Account Info:</h4>
+  <h5>Full Name: <%= @user.name.upcase %></h5>
+  <br>
+  <h4>Stats:</h4>
+  <br>
+  <br>
+  <h3><b>Comments: <%= @user.comments.count %></b></h3>
+  <br>
+  <h3><b>Videos Viewed: <%= @user.views.count %></b></h3>
+  <br>
+  <%# <p>Videos Liked: <b></b></p> %>
+
+<% if @user.playlists.count >= 1 %>
+  <h4>Playlists</h4>
+<% end %>
+  <% @user.playlists.each do |playlist| %>
+    <div class="card-index firstone">
+        <a href="/playlists/<%= playlist.id %>">
+          <div>
+              <% if playlist.videos.count == 0 %>
+                <img class = "thumbnail" src="/images/buttonclip.png" width="56%" height="100%">
+                <p class="card-text"><%= playlist.name %></p>
+              <% else %>
+                <img class = "thumbnail" src="<%= playlist.videos.last.thumbnail_url %>" width="100%" height="100%">
+                <p class="card-text"><%= playlist.name %></p>
+              <% end %>
+          </div>
+        </a>
+    </div>
+  <% end %>
+</div>

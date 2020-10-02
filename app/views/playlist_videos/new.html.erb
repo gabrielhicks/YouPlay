@@ -1,0 +1,17 @@
+<br><br>
+<div class="indexpage">
+  <h4>Add New Video</h4>
+  <%= form_for @playlistvideo do |f| %>
+      <br/>
+      <%= f.collection_select :playlist_id, @current_user.playlists, :id, :name%>
+      <%= f.collection_select :video_id, Video.all, :id, :title%>
+      <%= f.submit "Add", class: "searchbutton" %>
+  <% end %>
+  <ul>
+    <% if flash[:playlistvideo_errors] %>
+      <% flash[:playlistvideo_errors].each do |error| %>
+        <li style="color:red;"><%= error %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>

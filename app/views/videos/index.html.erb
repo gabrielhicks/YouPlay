@@ -1,0 +1,43 @@
+​<video playsinline autoplay muted loop>
+  <source src="/images/whitebg.mp4" type="video/mp4">
+</video>
+<div class="pills" id="pills">
+  <% cate = [] %>
+  <% @videos.each do |video| %>
+    <% cate << video.category %>
+    <% end %>
+    <%cate.uniq.each do |c| %>
+    <a class="badge badge-pill pill animated">
+      <%= form_tag(search_path, method: 'post', remote: true) do %><%= token_tag %> 
+        <%= hidden_field_tag :input, c %>
+        <%= submit_tag c.upcase, class: "searchbutton" %>
+      <% end %>
+    </a>
+  <% end %>
+  </div>
+<div class="searchbar sticky">
+  <%= form_tag(search_path, method: 'post', remote: true) do %><%= token_tag %> 
+    <%= text_field_tag :input, "", class: 'inputbox',placeholder:"Music..."%>
+    <%= submit_tag "Search", class:"searchbutton", id: "submit"%>
+  <% end %>
+</div>
+<div class="viewall-button"><a class="searchbutton" href="/all">See all videos</a></div>
+<br>
+
+<h4 style="margin-left:5vw; margin-right:5vw;">Videos</h4>
+<br>
+<div class="indexpage" id="indexpage">
+<% @videos.last(20).each do |video| %>
+  <%= render 'videos/video', video: video%>
+<% end %>
+</div>
+    <script>
+        $(document).ready(function() {
+            $(".searchbutton").click(function() {
+                $("html, body").animate({
+                    scrollTop: $(
+                      'html, body').get(0).scrollHeight
+                }, 555);
+            });
+        });
+    </script>

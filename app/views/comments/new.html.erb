@@ -1,0 +1,5 @@
+<%=form_for @comment do |f|%>
+    <%= f.hidden_field :user_id %>
+    <%= f.hidden_field :video_id %>
+    <%= f.text_area :content %>
+<% end %>

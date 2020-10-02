@@ -1,0 +1,27 @@
+​<video playsinline autoplay muted loop>
+  <source src="/images/whitebg.mp4" type="video/mp4">
+</video>
+<div class="preloader">
+  <div class="toppanel slideToLeftHand"></div>
+  <div class="makeitcenter"><img src="/images/buttonclip.png" class="explodetoright"/></div>
+  <div class="botpanel slideToRightHand"></div>
+</div>
+<div class="loginform">
+  <div class="formbox">
+    <%= form_tag({action: "login" }) do %>
+        <h4 class="logintext">Login</h4>
+        <%= text_field_tag :username, "",class:"login-box",placeholder:"Username" %>
+        <br>
+        <%= password_field_tag :password,"", class:"login-box",placeholder:"Password" %>
+        <%= submit_tag "Log in", class:"login-button" %>
+    <% end %>
+    <hr>
+    <ul>
+    <% if flash[:errors] %>
+      <li style="color:red;"><%= flash[:errors] %></li>
+    <% end %>
+    </ul>
+  </div>
+</div>
+<br>
+<div class="loginform"><a href="/"><button class="searchbutton" style="width:100px;">Skip</button></a></div>

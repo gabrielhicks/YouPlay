@@ -1,0 +1,20 @@
+<div class="loginform">
+  <div class="formbox">
+    <%= form_for @user do |f| %>
+    <h4 class="logintext">Update Profile</h4>
+        <%= f.text_field :username, class:"login-box",placeholder:"Username" %>
+        <br>
+        <%= f.text_field :name, class:"login-box",placeholder:"Name"%>
+        <br>
+        <%= f.submit class:"login-button" %>
+    <% end %>
+    <hr>
+    <ul>
+    <% if flash[:login_error] %>
+      <% flash[:login_error].each do |error|%>
+          <li style="color:red;"><%= error %></li>
+        <% end %>
+    <% end %>
+    </ul>
+  </div>
+</div>
