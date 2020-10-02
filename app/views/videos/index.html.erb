@@ -1,3 +1,4 @@
+<% require 'byebug' %>
 <video playsinline autoplay muted loop>
   <source src="/images/whitebg.mp4" type="video/mp4">
 </video>
@@ -11,7 +12,7 @@
       <%= form_tag("/search", method: 'post', remote: true) do %>
         <%= hidden_field_tag :category, c %>
         <%= hidden_field_tag :input, c %>
-        <%= submit_tag c.upcase, class: "searchbutton" %>
+        <%= submit_tag c.upcase, class: "searchbutton pillbutton" %>
       <% end %>
     </a>
   <% end %>

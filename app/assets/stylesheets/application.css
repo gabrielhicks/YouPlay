@@ -14,7 +14,7 @@
  *= require_self
  */
 
-video{
+video {
   object-fit: cover;
   width: 100%;
   height: 100vh;
@@ -24,7 +24,7 @@ video{
   z-index: -10000;
 }
 
-.views{
+.views {
   margin-left: 3vw;
 }
 
@@ -39,43 +39,46 @@ video{
   clear: both;
 }
 
-.group{
+.group {
   background: none;
   border-radius: 6px;
   clear: both;
   *zoom: 1;
 }
 
-.footerplacement{
-  bottom:0px;
+.footerplacement {
+  bottom: 0px;
 }
 
-footer{
+footer {
   margin-top: 20px;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
 }
-p{
+
+p {
   opacity: 0.3;
   transition: 1s;
   color: rgb(48, 172, 251);
 }
-footer p a:hover{
+
+footer p a:hover {
   text-decoration: none;
 }
 
-footer p:hover{
+footer p:hover {
   transform: scale(1.03);
   opacity: 1;
 }
 
-footer h6{
+footer h6 {
   font-size: 10pt;
   margin-bottom: -5px;
   font-weight: bold;
 }
-footer .design{
+
+footer .design {
   opacity: 0.9;
 }
 
@@ -113,26 +116,25 @@ aside {
 .comment-button {
   position: absolute;
   right: 3vw;
-  background-color: rgb(48, 172, 251);
 }
 
 .seecomment {
-    letter-spacing: 1px;
-    padding: 3px;
-    text-indent: 1vh;
-    position: right;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    border-radius: 20px;
-    background: transparent;
-  }
+  letter-spacing: 1px;
+  padding: 3px;
+  text-indent: 1vh;
+  position: right;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  background: transparent;
+}
 
 .commentbutton {
   border-radius: 20px;
   border: 0px;
   font-weight: 400;
-    }
+}
 
 /*nav bar*/
 
@@ -187,20 +189,19 @@ html {
   width: 90%;
 }
 
-.viewall-button{
+.viewall-button {
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
-.viewall-button a{
+.viewall-button a {
   color: white;
 }
 
-.viewall-button a:hover{
+.viewall-button a:hover {
   text-decoration: none;
 }
-
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
@@ -233,12 +234,10 @@ html {
   }
 }
 
-
 .indexpage {
   margin: auto;
   width: 90%;
 }
-
 
 .landing_page {
   height: 100vh;
@@ -260,11 +259,11 @@ html {
   align-items: center;
 }
 
-.bringitdown{
+.bringitdown {
   padding-top: 100vh;
 }
 
-.editform{
+.editform {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -282,7 +281,6 @@ html {
 
 }
 
-
 .login-box {
   border: 1px solid lightgrey;
   border-radius: 20px;
@@ -298,19 +296,13 @@ html {
   outline: none;
 }
 
-.login-box:hover {
-  transform: scale(1.03);
-
-}
-
 .login-button {
-  background-color: rgb(48, 172, 251);
-  opacity: 0.8;
   width: 100%;
+  background-color: rgb(48, 172, 251);
+  color: white;
   margin-top: 15px;
   border-radius: 20px;
   border: none;
-  color: white;
   margin-left: 5px;
   font-size: 15pt;
   font-weight: 700;
@@ -319,8 +311,7 @@ html {
 }
 
 .login-button:hover {
-  transform: scale(1.1);
-  opacity: 1;
+  transform: scale(1.03);
 }
 
 .modal {
@@ -403,7 +394,7 @@ body:after {
   margin-right: 10px;
   border: 1px solid grey;
   transition: 1s;
-  outline:none;
+  outline: none;
   opacity: 0.8;
 }
 
@@ -422,7 +413,7 @@ body:after {
   outline: none;
 }
 
-.redbutton{
+.redbutton {
   background: rgb(255, 0, 0);
   opacity: 0.3;
 }
@@ -433,13 +424,13 @@ body:after {
   opacity: 1;
 }
 
-.stickyrighttop{
+.stickyrighttop {
   position: fixed;
   margin-top: 13px;
   right: 5vw;
 }
 
-.stickybottom{
+.stickybottom {
   position: fixed;
   right: 5vw;
   top: 92vh;
@@ -460,30 +451,11 @@ h4 {
   letter-spacing: 4px;
   display: flex;
   align-items: center;
-  color:rgb(48, 172, 251);
-  transition: 1s;
-}
-
-h4::after {
-  content: '';
-  flex: 1;
-  margin-left: 1.2rem;
-  height: 1px;
-  color: lightgrey;
-  background-color: rgba(0,0,0,.1);
-}
-
-h5 {
-  font-size: 18pt;
-  font-weight: 900;
-  letter-spacing: 4px;
-  display: flex;
-  align-items: center;
   color: rgb(48, 172, 251);
   transition: 1s;
 }
 
-h5::after {
+h4::after {
   content: '';
   flex: 1;
   margin-left: 1.2rem;
@@ -495,6 +467,15 @@ h5::after {
 .pill {
   margin: 5px;
   position: relative;
+}
+
+.pillbutton {
+  font-size: 1.1em;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-top: -8px;
 }
 
 .animated {
@@ -519,6 +500,8 @@ h5::after {
     transform: translateY(-10px);
   }
 }
+
+
 
 .card-index {
   width: 19%;
@@ -619,6 +602,7 @@ img {
   }
 }
 
+
 @media only screen and (max-width: 1000px) {
   .card-index {
     width: 48%;
@@ -647,6 +631,8 @@ img {
     font-size: 10pt;
   }
 }
+
+
 
 /* page transition*/
 
