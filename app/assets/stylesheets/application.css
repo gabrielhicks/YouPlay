@@ -14,7 +14,7 @@
  *= require_self
  */
 
-video {
+video{
   object-fit: cover;
   width: 100%;
   height: 100vh;
@@ -24,7 +24,7 @@ video {
   z-index: -10000;
 }
 
-.views {
+.views{
   margin-left: 3vw;
 }
 
@@ -39,46 +39,43 @@ video {
   clear: both;
 }
 
-.group {
+.group{
   background: none;
   border-radius: 6px;
   clear: both;
   *zoom: 1;
 }
 
-.footerplacement {
-  bottom: 0px;
+.footerplacement{
+  bottom:0px;
 }
 
-footer {
+footer{
   margin-top: 20px;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
 }
-
-p {
+p{
   opacity: 0.3;
   transition: 1s;
   color: rgb(48, 172, 251);
 }
-
-footer p a:hover {
+footer p a:hover{
   text-decoration: none;
 }
 
-footer p:hover {
+footer p:hover{
   transform: scale(1.03);
   opacity: 1;
 }
 
-footer h6 {
+footer h6{
   font-size: 10pt;
   margin-bottom: -5px;
   font-weight: bold;
 }
-
-footer .design {
+footer .design{
   opacity: 0.9;
 }
 
@@ -120,22 +117,22 @@ aside {
 }
 
 .seecomment {
-  letter-spacing: 1px;
-  padding: 3px;
-  text-indent: 1vh;
-  position: right;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  border-radius: 20px;
-  background: transparent;
-}
+    letter-spacing: 1px;
+    padding: 3px;
+    text-indent: 1vh;
+    position: right;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    background: transparent;
+  }
 
 .commentbutton {
   border-radius: 20px;
   border: 0px;
   font-weight: 400;
-}
+    }
 
 /*nav bar*/
 
@@ -190,17 +187,17 @@ html {
   width: 90%;
 }
 
-.viewall-button {
+.viewall-button{
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
-.viewall-button a {
+.viewall-button a{
   color: white;
 }
 
-.viewall-button a:hover {
+.viewall-button a:hover{
   text-decoration: none;
 }
 
@@ -263,11 +260,11 @@ html {
   align-items: center;
 }
 
-.bringitdown {
+.bringitdown{
   padding-top: 100vh;
 }
 
-.editform {
+.editform{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -406,7 +403,7 @@ body:after {
   margin-right: 10px;
   border: 1px solid grey;
   transition: 1s;
-  outline: none;
+  outline:none;
   opacity: 0.8;
 }
 
@@ -425,7 +422,7 @@ body:after {
   outline: none;
 }
 
-.redbutton {
+.redbutton{
   background: rgb(255, 0, 0);
   opacity: 0.3;
 }
@@ -436,13 +433,13 @@ body:after {
   opacity: 1;
 }
 
-.stickyrighttop {
+.stickyrighttop{
   position: fixed;
   margin-top: 13px;
   right: 5vw;
 }
 
-.stickybottom {
+.stickybottom{
   position: fixed;
   right: 5vw;
   top: 92vh;
@@ -463,7 +460,7 @@ h4 {
   letter-spacing: 4px;
   display: flex;
   align-items: center;
-  color: rgb(48, 172, 251);
+  color:rgb(48, 172, 251);
   transition: 1s;
 }
 
@@ -473,7 +470,7 @@ h4::after {
   margin-left: 1.2rem;
   height: 1px;
   color: lightgrey;
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0,0,0,.1);
 }
 
 h5 {
@@ -754,7 +751,7 @@ img {
   animation: transitionexplode 3000ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  margin-top: 50vh;
+  margin-top: 100vh;
   width: 50px;
   z-index: 1000000000;
   border-radius: 0px;
