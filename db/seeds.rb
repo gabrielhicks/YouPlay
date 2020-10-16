@@ -35,7 +35,6 @@ require_relative '../config/environment'
 @yt10 = JSON.parse(@youtube10)
 
 @yt_array = [@yt1, @yt2, @yt3, @yt4, @yt5, @yt6, @yt7, @yt8, @yt9, @yt10]
-# @yt_array = [@yt1]
 
 j=0
 @yt_array.each do |array|
