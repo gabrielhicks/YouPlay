@@ -1,24 +1,6 @@
-# README
+# YouPlay
+## You can find out app hosted here: https://you-play-heroku.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## To make this app function with your API key, please add a '.env' file, as well as 'API_KEY=' followed by your individual API key from YouTube Data API
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Thanks! - Gabriel and Zhengjian
